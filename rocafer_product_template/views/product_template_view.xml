@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rocafer_product_template_view" model="ir.ui.view">
+        <field name="name">rocafer.product.normal.form</field>
+        <field name="model">product.template</field>
+        <field name="priority">500</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_information']" position="after">
+                <page name="rocafer_data" string="Rocafer data">
+                    <group string="Partner">
+                        <field name="res_partner_id" class="oe_inline" options="{'no_create': True}"></field>
+                    </group>
+                    <group string="Order">
+                        <group>
+                            <field name="num_order" widget="char"></field>
+                            <field name="num_partner" widget="char"></field>
+                            <field name="num_order_partner" widget="char"></field>
+                        </group>
+                        <group>
+                            <field name="date_order"></field>
+                            <field name="register_by"></field>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Material">
+                            <group>
+                                <field name="meters"></field>
+                                <field name="width"></field>
+                                <field name="time_estimated"></field>
+                            </group>
+                            <group>
+                                <field name="assembly_figures"></field>
+                                <field name="y_height"></field>
+                                <field name="x_width"></field>
+                            </group>
+                        </group>
+                        <group string="Material 2">
+                            <group>
+                                <field name="troquel_number"></field>
+                                <field name="figures"></field>
+                                <field name="z_imp_cor"></field>
+                            </group>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

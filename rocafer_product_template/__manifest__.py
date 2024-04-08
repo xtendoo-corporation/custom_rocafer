@@ -7,8 +7,11 @@
     "license": "LGPL-3",
     "application": True,
     "depends": [
+        'product',
+        'contacts',
     ],
     "data": [
+        'views/product_template_view.xml'
     ],
     "installable": True,
 }
