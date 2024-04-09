@@ -2,30 +2,30 @@
 <odoo>
 
     <!-- Definicion de la vista-->
-    <record id="varnish_action" model="ir.actions.act_window">
-        <field name="name">Varnish</field>
+    <record id="color_variant_action" model="ir.actions.act_window">
+        <field name="name">Color</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,form</field>
-        <field name="res_model">varnish.type</field>
+        <field name="res_model">color.variant</field>
         <field name="help" type="html">
-            <tree string="Varnish type">
+            <tree string="Color variant">
                 <field name="name"/>
             </tree>
             <p class="o_view_nocontent_smiling_face">
-                Create a Varnish option
+                Create a Color variant
             </p>
         </field>
     </record>
 
     <!--Formulario de edicion-->
-    <record id="varnish_type_form" model="ir.ui.view">
-        <field name="name">varnish.type.form</field>
-        <field name="model">varnish.type</field>
+    <record id="color_variant_form" model="ir.ui.view">
+        <field name="name">color.variant.form</field>
+        <field name="model">color.variant</field>
         <field name="arch" type="xml">
-        <form string="Varnish type">
+        <form string="Color variant">
             <sheet>
                 <group >
-                    <field name="name" placeholder="Varnish name"/>
+                    <field name="name" placeholder="Color name"/>
                 </group>
             </sheet>
         </form>
@@ -39,9 +39,9 @@
               sequence="60"
     />
 
-    <menuitem id="varnish_menu"
-              name="Varnish type"
-              action="varnish_action"
-              parent="menu_rocafer" sequence="8"/>
+    <menuitem id="color_menu"
+              name="Color variant"
+              action="color_variant_action"
+              parent="menu_rocafer" sequence="1"/>
 
 </odoo>

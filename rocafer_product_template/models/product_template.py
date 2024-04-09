@@ -73,11 +73,12 @@ class Product(models.Model):
     )
 
     product_material = fields.Many2one(
-        comodel_name='product.template',
+        comodel_name='material.type',
         string='Product Material',
     )
 
-    colors = fields.Integer(
+    color_variant = fields.Many2one(
+        comodel_name='color.variant',
         string='Colors'
     )
 

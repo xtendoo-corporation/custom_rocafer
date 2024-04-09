@@ -18,14 +18,14 @@
     </record>
 
     <!--Formulario de edicion-->
-    <record id="varnish_type_form" model="ir.ui.view">
-        <field name="name">varnish.type.form</field>
-        <field name="model">varnish.type</field>
+    <record id="material_type_form" model="ir.ui.view">
+        <field name="name">material.type.form</field>
+        <field name="model">material.type</field>
         <field name="arch" type="xml">
-        <form string="Varnish type">
+        <form string="Material type">
             <sheet>
                 <group >
-                    <field name="name" placeholder="Varnish name"/>
+                    <field name="name" placeholder="Material name"/>
                 </group>
             </sheet>
         </form>
@@ -39,9 +39,9 @@
               sequence="60"
     />
 
-    <menuitem id="varnish_menu"
-              name="Varnish type"
-              action="varnish_action"
+    <menuitem id="material_menu"
+              name="Material type"
+              action="material_type_action"
               parent="menu_rocafer" sequence="1"/>
 
 </odoo>

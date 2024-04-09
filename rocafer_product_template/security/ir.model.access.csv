@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 rocafer_product_template.access_varnish_type,access_varnish_type,rocafer_product_template.model_varnish_type,base.group_user,1,1,1,1
 rocafer_product_template.access_stamping_option,access_stamping_option,rocafer_product_template.model_stamping_option,base.group_user,1,1,1,1
 rocafer_product_template.access_print_orientation,access_print_orientation,rocafer_product_template.model_print_orientation,base.group_user,1,1,1,1
+rocafer_product_template.access_material_type,access_material_type,rocafer_product_template.model_material_type,base.group_user,1,1,1,1
+rocafer_product_template.access_color_variant,access_color_variant,rocafer_product_template.model_color_variant,base.group_user,1,1,1,1
