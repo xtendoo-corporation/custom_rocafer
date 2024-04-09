@@ -63,6 +63,15 @@
                         <field name="product_varnish" options="{'no_create': True}"></field>
                         <field name="product_stamping" options="{'no_create': True}"></field>
                     </group>
+                    <group string="Orientation">
+                        <group>
+                            <field name="print_orientation_id"></field>
+                        </group>
+                        <group>
+                            <field name="image_orientation" widget="image" readonly="1"
+                                   options='{"size": [100, 100]}'></field>
+                        </group>
+                    </group>
                 </page>
             </xpath>
         </field>

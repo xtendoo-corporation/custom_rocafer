@@ -36,7 +36,7 @@ class Product(models.Model):
         string='Partner order number'
     )
 
-    troquel_number = fields.Char(
+    troquel_number = fields.Integer(
         string='Troquel number'
     )
 
@@ -46,6 +46,10 @@ class Product(models.Model):
 
     z_imp_cor = fields.Integer(
         string='Z. IMP./COR.'
+    )
+
+    assembly_figures = fields.Integer(
+        string='Assembly figures'
     )
 
     y_height = fields.Integer(
@@ -75,7 +79,6 @@ class Product(models.Model):
 
     colors = fields.Integer(
         string='Colors'
-        #VER COLORES PIE DE PAGINA
     )
 
     inner_diameter_roll = fields.Float(
@@ -94,9 +97,14 @@ class Product(models.Model):
         string='MAQ Label'
     )
 
-    product_orientation_image = fields.Many2one(
-        comodel_name='product.template',
-        string='Product Orientation',
+    print_orientation_id = fields.Many2one(
+        comodel_name="print.orientation",
+        string="Print orientation"
+    )
+
+    image_orientation = fields.Char(
+        string="Imagen",
+        related="print_orientation_id.image",
     )
 
     product_varnish = fields.Many2one(
@@ -112,3 +120,7 @@ class Product(models.Model):
     administration_comments = fields.Char(
         string='Administration Comments'
     )
+
+
+
+
