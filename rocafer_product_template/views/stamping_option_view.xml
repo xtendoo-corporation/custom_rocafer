@@ -2,30 +2,30 @@
 <odoo>
 
     <!-- Definicion de la vista-->
-    <record id="varnish_action" model="ir.actions.act_window">
-        <field name="name">Varnish</field>
+    <record id="stamping_action" model="ir.actions.act_window">
+        <field name="name">Stamping</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,form</field>
-        <field name="res_model">varnish.type</field>
+        <field name="res_model">stamping.option</field>
         <field name="help" type="html">
-            <tree string="Varnish type">
+            <tree string="Stamping option">
                 <field name="name"/>
             </tree>
             <p class="o_view_nocontent_smiling_face">
-                Create a Varnish option
+                Create a new Stamping
             </p>
         </field>
     </record>
 
     <!--Formulario de edicion-->
-    <record id="varnish_type_form" model="ir.ui.view">
-        <field name="name">varnish.type.form</field>
-        <field name="model">varnish.type</field>
+    <record id="stamping_type_form" model="ir.ui.view">
+        <field name="name">stamping.option.form</field>
+        <field name="model">stamping.option</field>
         <field name="arch" type="xml">
-        <form string="Varnish type">
+        <form string="Stamping">
             <sheet>
                 <group >
-                    <field name="name" placeholder="Varnish name"/>
+                    <field name="name" placeholder="Stamping name"/>
                 </group>
             </sheet>
         </form>
@@ -39,9 +39,10 @@
               sequence="60"
     />
 
-    <menuitem id="varnish_menu"
-              name="Varnish type"
-              action="varnish_action"
-              parent="menu_rocafer" sequence="1"/>
+    <menuitem id="stamping_menu"
+              name="Stamping"
+              action="stamping_action"
+              parent="menu_rocafer"
+              sequence="1"/>
 
 </odoo>

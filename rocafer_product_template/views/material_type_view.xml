@@ -2,17 +2,17 @@
 <odoo>
 
     <!-- Definicion de la vista-->
-    <record id="varnish_action" model="ir.actions.act_window">
-        <field name="name">Varnish</field>
+    <record id="material_type_action" model="ir.actions.act_window">
+        <field name="name">Material</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,form</field>
-        <field name="res_model">varnish.type</field>
+        <field name="res_model">material.type</field>
         <field name="help" type="html">
-            <tree string="Varnish type">
+            <tree string="Material type">
                 <field name="name"/>
             </tree>
             <p class="o_view_nocontent_smiling_face">
-                Create a Varnish option
+                Create a Material type
             </p>
         </field>
     </record>

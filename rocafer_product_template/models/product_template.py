@@ -105,7 +105,7 @@ class Product(models.Model):
     )
 
     product_stamping = fields.Many2one(
-        comodel_name='product.template',
+        comodel_name='stamping.option',
         string='Product Stamping',
     )
 

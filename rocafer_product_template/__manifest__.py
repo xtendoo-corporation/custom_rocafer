@@ -14,6 +14,8 @@
     "data": [
         'views/product_template_view.xml',
         'views/varnish_type_view.xml',
+        'views/stamping_option_view.xml',
+        'security/ir.model.access.csv',
     ],
     "installable": True,
 }
