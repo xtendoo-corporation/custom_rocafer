@@ -9,59 +9,47 @@
             <xpath expr="//page[@name='general_information']" position="after">
                 <page name="rocafer_data" string="Rocafer data">
                     <group string="Partner">
-                        <group>
-                            <field name="res_partner_id" options="{'no_create': True}"></field>
-                            <field name="num_partner" widget="char"></field>
-                        </group>
-                        <group>
-                            <field name="label_code"></field>
-                        </group>
+                        <field name="res_partner_id" class="oe_inline" options="{'no_create': True}"></field>
                     </group>
-                    <group string="Order info">
+                    <group string="Order">
+                        <group>
+                            <field name="num_order" widget="char"></field>
+                            <field name="num_partner" widget="char"></field>
+                            <field name="num_order_partner" widget="char"></field>
+                        </group>
                         <group>
                             <field name="date_order"></field>
                             <field name="register_by"></field>
                         </group>
-                        <group>
-                            <field name="num_order" widget="char"></field>
-                            <field name="num_order_partner" widget="char"></field>
-                        </group>
                     </group>
-
                     <group>
                         <group string="Material">
-                            <field name="troquel_number"></field>
-                            <field name="figures"></field>
-                            <field name="z_imp_cor"></field>
+                            <group>
+                                <field name="meters"></field>
+                                <field name="width"></field>
+                                <field name="time_estimated"></field>
+                            </group>
+                            <group>
+                                <field name="assembly_figures"></field>
+                                <field name="y_height"></field>
+                                <field name="x_width"></field>
+                            </group>
                         </group>
-                        <group string="Assembly figures">
-                            <field name="y_height"></field>
-                            <field name="x_width"></field>
-                        </group>
-                    </group>
-                    <group string="******NEW GROUP*****">
-                        <group>
-                            <field name="date_delivery"></field>
-                            <field name="amount"></field>
-                        </group>
-                        <group>
-                            <field name="size"></field>
-                            <field name="product_material"></field>
-                        </group>
-                    </group>
-                    <group>
-                        <group>
-                            <field name="amount_label_exit"></field>
-                            <field name="maq_label"></field>
-                        </group>
-                        <group>
-                            <field name="inner_diameter_roll"></field>
-                            <field name="outer_diameter_roll"></field>
+                        <group string="Material 2">
+                            <group>
+                                <field name="troquel_number"></field>
+                                <field name="figures"></field>
+                                <field name="z_imp_cor"></field>
+                            </group>
                         </group>
                     </group>
-                    <group>
-                        <field name="product_varnish"></field>
-                        <field name="product_stamping"></field>
+                    <group string="Orientation">
+                        <group>
+                            <field name="print_orientation_id"></field>
+                        </group>
+                        <group>
+                            <field name="image_orientation" widget="image" readonly="1" options='{"size": [100, 100]}'></field>
+                        </group>
                     </group>
                 </page>
             </xpath>

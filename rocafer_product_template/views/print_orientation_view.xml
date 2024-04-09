@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Definicion de la vista-->
+    <record id="print_orientation_action" model="ir.actions.act_window">
+        <field name="name">Print Orientation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">print.orientation</field>
+        <field name="help" type="html">
+            <tree string="Print orientation">
+                <field name="name"/>
+            </tree>
+            <p class="o_view_nocontent_smiling_face">
+                Create a Print orientation
+            </p>
+        </field>
+    </record>
+
+    <!--Formulario de edicion-->
+    <record id="print_orientation_form" model="ir.ui.view">
+        <field name="name">print.orientation.form</field>
+        <field name="model">print.orientation</field>
+        <field name="arch" type="xml">
+        <form string="Print orientation">
+            <sheet>
+                <group >
+                    <field name="name" placeholder="Orientation name"/>
+                    <field name="image" widget="image"/>
+                    <field name="product_template_ids" options="{'no_create': True}" invisible="1"/>
+                </group>
+            </sheet>
+        </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_rocafer"
+              name="Rocafer"
+              parent="stock.menu_stock_config_settings"
+              sequence="60"
+    />
+
+    <menuitem id="print_orientation_menu"
+              name="Print orientation"
+              action="print_orientation_action"
+              parent="menu_rocafer" sequence="1"/>
+
+</odoo>

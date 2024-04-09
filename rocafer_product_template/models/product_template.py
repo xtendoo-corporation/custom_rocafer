@@ -12,10 +12,6 @@ class Product(models.Model):
         string='Name',
     )
 
-    label_code = fields.Char(
-        string='Label code'
-    )
-
     date_order = fields.Date(
         string='Date order'
     )
@@ -36,7 +32,7 @@ class Product(models.Model):
         string='Partner order number'
     )
 
-    troquel_number = fields.Char(
+    troquel_number = fields.Integer(
         string='Troquel number'
     )
 
@@ -46,6 +42,22 @@ class Product(models.Model):
 
     z_imp_cor = fields.Integer(
         string='Z. IMP./COR.'
+    )
+
+    meters = fields.Integer(
+        string='Meters'
+    )
+
+    width = fields.Integer(
+        string='Width'
+    )
+
+    time_estimated = fields.Integer(
+        string='Time Estimated'
+    )
+
+    assembly_figures = fields.Integer(
+        string='Assembly figures'
     )
 
     y_height = fields.Integer(
@@ -68,6 +80,10 @@ class Product(models.Model):
         string='Size'
     )
 
+    material = fields.Char(
+        string='***TABLA DE MATERIALES***'
+    )
+
     product_material = fields.Many2one(
         comodel_name='product.template',
         string='Product Material',
@@ -75,7 +91,6 @@ class Product(models.Model):
 
     colors = fields.Integer(
         string='Colors'
-        #VER COLORES PIE DE PAGINA
     )
 
     inner_diameter_roll = fields.Float(
@@ -94,13 +109,18 @@ class Product(models.Model):
         string='MAQ Label'
     )
 
-    product_orientation_image = fields.Many2one(
-        comodel_name='product.template',
-        string='Product Orientation',
+    print_orientation_id = fields.Many2one(
+        comodel_name="print.orientation",
+        string="Print orientation"
+    )
+
+    image_orientation = fields.Char(
+        string="Imagen",
+        related="print_orientation_id.image",
     )
 
     product_varnish = fields.Many2one(
-        comodel_name='varnish.type',
+        comodel_name='product.template',
         string='Product Varnish',
     )
 
@@ -109,6 +129,6 @@ class Product(models.Model):
         string='Product Stamping',
     )
 
-    administration_comments = fields.Char(
-        string='Administration Comments'
-    )
+
+
+
