@@ -9,9 +9,11 @@
     "depends": [
         'product',
         'contacts',
+        'stock',
     ],
     "data": [
-        'views/product_template_view.xml'
+        'views/product_template_view.xml',
+        'views/varnish_type_view.xml',
     ],
     "installable": True,
 }

@@ -7,10 +7,13 @@ from odoo import fields, models, api
 class Product(models.Model):
     _inherit = 'product.template'
 
-    # Elegir entre los pructos creados
     res_partner_id = fields.Many2one(
         comodel_name='res.partner',
         string='Name',
+    )
+
+    label_code = fields.Char(
+        string='Label code'
     )
 
     date_order = fields.Date(
@@ -33,30 +36,22 @@ class Product(models.Model):
         string='Partner order number'
     )
 
-    troquel_number = fields.Integer(
+    troquel_number = fields.Char(
         string='Troquel number'
     )
+
     figures = fields.Integer(
         string='Figures'
     )
+
     z_imp_cor = fields.Integer(
         string='Z. IMP./COR.'
     )
-    meters = fields.Integer(
-        string='Meters'
-    )
-    width = fields.Integer(
-        string='Width'
-    )
-    time_estimated = fields.Integer(
-        string='Time Estimated'
-    )
-    assembly_figures = fields.Integer(
-        string='Assembly figures'
-    )
+
     y_height = fields.Integer(
         string='Y height'
     )
+
     x_width = fields.Integer(
         string='X Width'
     )
@@ -72,35 +67,48 @@ class Product(models.Model):
     size = fields.Char(
         string='Size'
     )
-    material = fields.Char(
-        string='***TABLA DE MATERIALES***'
+
+    product_material = fields.Many2one(
+        comodel_name='product.template',
+        string='Product Material',
     )
+
     colors = fields.Integer(
         string='Colors'
         #VER COLORES PIE DE PAGINA
     )
+
     inner_diameter_roll = fields.Float(
         string='Inner diameter roll'
     )
+
     outer_diameter_roll = fields.Float(
         string='Outer diameter roll'
     )
+
     amount_label_exit = fields.Integer(
         string='Amount label exit'
     )
+
     maq_label = fields.Char(
         string='MAQ Label'
     )
-    orientation_image = fields.Char(
-        string='***TABLA DE IMAGENES***'
-    )
-    varnish = fields.Char(
-        string='***TABLA DE BARNICES***'
-    )
-    extrampation = fields.Char(
-        string='***TABLA DE ESTAMPACIONES***'
+
+    product_orientation_image = fields.Many2one(
+        comodel_name='product.template',
+        string='Product Orientation',
     )
 
+    product_varnish = fields.Many2one(
+        comodel_name='varnish.type',
+        string='Product Varnish',
+    )
 
+    product_stamping = fields.Many2one(
+        comodel_name='product.template',
+        string='Product Stamping',
+    )
 
-
+    administration_comments = fields.Char(
+        string='Administration Comments'
+    )
