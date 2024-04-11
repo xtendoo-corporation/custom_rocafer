@@ -4,16 +4,15 @@
 from odoo import fields, models, api
 
 
-class ColorVariant(models.Model):
-    _name = "color.variant"
-    _description = "Color variant"
+class ColorInk(models.Model):
+    _name = "color.ink"
+    _description = "Color inks"
 
     name = fields.Char(
-        string="Color variant"
+        string="Name",
     )
 
-    product_template_color_variant = fields.One2many(
+    product_template_id = fields.Many2one(
         comodel_name='product.template',
-        inverse_name='color_variant',
-        string='Color',
+        string='Product',
     )

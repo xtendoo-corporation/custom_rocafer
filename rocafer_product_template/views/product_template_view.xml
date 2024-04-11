@@ -10,78 +10,95 @@
                 <page name="rocafer_data" string="Rocafer data">
                     <group string="Partner">
                         <group>
-                            <field name="res_partner_id" options="{'no_create': True}"></field>
-                            <field name="num_partner" widget="char"></field>
+                            <field name="res_partner_id" options="{'no_create': True}"/>
+                            <!--                            <field name="num_partner" widget="char"/>-->
                         </group>
                         <group>
-                            <field name="label_code"></field>
+                            <field name="label_code"/>
+                            <!--                            <field name="num_order_partner" widget="char"/>-->
                         </group>
                     </group>
-                    <group string="Order info">
+                    <!--                    <group string="Order info">-->
+                    <!--                        <group>-->
+                    <!--                            <field name="date_order"/>-->
+                    <!--                            <field name="delivery_date"/>-->
+                    <!--                        </group>-->
+                    <!--                        <group>-->
+                    <!--                            <field name="register_by"/>-->
+                    <!--                            <field name="num_order" widget="char"/>-->
+                    <!--                        </group>-->
+                    <!--                    </group>-->
+                    <group string="Troquel">
                         <group>
-                            <field name="date_order"></field>
-                            <field name="register_by"></field>
+                            <field name="troquel_number"/>
+                            <field name="printing_cylinders"/>
+                            <field name="cut_cylinders"/>
                         </group>
                         <group>
-                            <field name="num_order" widget="char"></field>
-                            <field name="num_order_partner" widget="char"></field>
+                            <field name="assembly_figure_x"/>
+                            <field name="assembly_figure_y"/>
+                            <field name="troquel_figure"/>
                         </group>
                     </group>
-
-                    <group>
-                        <group string="Material">
-                            <field name="troquel_number"></field>
-                            <field name="figures"></field>
-                            <field name="z_imp_cor"></field>
+                    <group string="Production">
+                        <group>
+                            <field name="label_width"/>
+                            <field name="label_height"/>
+                            <field name="h1_value"/>
+                            <field name="h2_value"/>
                         </group>
-                        <group string="Assembly figures">
-                            <field name="y_height"></field>
-                            <field name="x_width"></field>
+                        <group>
+                            <field name="advance_label_separation"/>
+                            <field name="material_width_separation"/>
+                            <field name="amount"/>
+                            <field name="amount_labels" readonly="0"/>
                         </group>
                     </group>
-                    <group string="More info">
+                    <group string="Materials">
                         <group>
-                            <field name="date_delivery"></field>
-                            <field name="amount"></field>
+                            <field name="product_material"/>
+                            <field name="color_number"/>
+                            <field name="product_varnish" options="{'no_create': True}"/>
+                            <field name="color_ink_ids" widget="one2many_list" mode="tree">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                </tree>
+                            </field>
                         </group>
                         <group>
-                            <field name="size"></field>
-                            <field name="product_material"></field>
-                        </group>
-                    </group>
-                    <group>
-                        <group>
-                            <field name="amount_label_exit"></field>
-                            <field name="maq_label"></field>
-                        </group>
-                        <group>
-                            <field name="inner_diameter_roll"></field>
-                            <field name="outer_diameter_roll"></field>
-                        </group>
-                    </group>
-                    <group>
-                        <group>
-                            <field name="product_varnish" options="{'no_create': True}"></field>
-                            <field name="product_stamping" options="{'no_create': True}"></field>
-                        </group>
-                        <group>
-                            <field name="product_material" options="{'no_create': True}"></field>
-                            <field name="color_variant" options="{'no_create': True}"></field>
+                            <field name="amount_label_exit"/>
+                            <field name="inner_diameter_roll"/>
+                            <field name="outer_diameter_roll"/>
+                            <field name="product_stamping" options="{'no_create': True}"/>
+                            <field name="laminated"/>
+                            <field name="serigraphy"/>
+                            <field name="relief"/>
+                            <field name="regulatory_council_numbering"/>
                         </group>
                     </group>
                     <group string="Orientation">
                         <group>
-                            <field name="print_orientation_id"></field>
+                            <field name="print_orientation_id"/>
                         </group>
                         <group>
                             <field name="image_orientation" widget="image" readonly="1"
-                                   options='{"size": [100, 100]}'></field>
+                                   options='{"size": [100, 100]}'/>
                         </group>
                     </group>
-                    <group string="Internal notes">
-                        <group>
+                    <group>
+                        <group string="Preprint comments">
+                            <field colspan="2" name="preprint_comments" nolabel="1"
+                                   placeholder="Add internal comments about the preprint here."/>
+                        </group>
+                        <group string="Administration comments">
                             <field colspan="2" name="administration_comments" nolabel="1"
-                                   placeholder="This note is only for internal purposes."/>
+                                   placeholder="Add internal administration comments here."/>
+                        </group>
+                    </group>
+                    <group string="Reviewers expedition">
+                        <group>
+                            <field colspan="2" name="reviewers_expedition" nolabel="1"
+                                   placeholder="Add internal notes about the reviewers expedition here."/>
                         </group>
                     </group>
                 </page>

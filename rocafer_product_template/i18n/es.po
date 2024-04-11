@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-09 11:26+0000\n"
-"PO-Revision-Date: 2024-04-09 11:26+0000\n"
+"POT-Creation-Date: 2024-04-11 12:49+0000\n"
+"PO-Revision-Date: 2024-04-11 12:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,10 +16,36 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
+msgid "Add internal administration comments here."
+msgstr "Agregue comentarios de administración interna aquí."
+
+#. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
+msgid "Add internal comments about the preprint here."
+msgstr ""
+
+#. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
+msgid "Add internal notes about the reviewers expedition here."
+msgstr "Agregue comentarios internos sobre la preimpresión aquí."
+
+#. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__administration_comments
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__administration_comments
 msgid "Administration Comments"
 msgstr "Comentarios administración"
+
+#. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
+msgid "Administration comments"
+msgstr "Comentarios administración"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__advance_label_separation
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__advance_label_separation
+msgid "Advance label separation"
+msgstr "Separación entre etiquetas avance"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__amount
@@ -34,41 +60,53 @@ msgid "Amount label exit"
 msgstr "Cantidad etiqueta salida"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__assembly_figures
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__assembly_figures
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
-msgid "Assembly figures"
-msgstr "Figuras montaje"
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__amount_labels
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__amount_labels
+msgid "Amount labels"
+msgstr "Etiquetas de cantidad"
 
 #. module: rocafer_product_template
-#: model:ir.actions.act_window,name:rocafer_product_template.color_variant_action
-#: model:ir.model.fields,field_description:rocafer_product_template.field_color_variant__product_template_color_variant
+#: model:ir.model.fields.selection,name:rocafer_product_template.selection__product_template__laminated__gloss
+msgid "Brillo"
+msgstr "Brillo"
+
+#. module: rocafer_product_template
+#: model:ir.actions.act_window,name:rocafer_product_template.color_ink_action
 msgid "Color"
 msgstr "Color"
 
 #. module: rocafer_product_template
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template.color_variant_form
+#: model:ir.ui.menu,name:rocafer_product_template.color_menu
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.color_ink_form
+msgid "Color ink"
+msgstr "Color"
+
+#. module: rocafer_product_template
+#: model:ir.model,name:rocafer_product_template.model_color_ink
+msgid "Color inks"
+msgstr "Tinta color"
+
+#. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.color_ink_form
 msgid "Color name"
 msgstr "Nombre del color"
 
 #. module: rocafer_product_template
-#: model:ir.model,name:rocafer_product_template.model_color_variant
-#: model:ir.model.fields,field_description:rocafer_product_template.field_color_variant__name
-#: model:ir.ui.menu,name:rocafer_product_template.color_menu
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template.color_variant_form
-msgid "Color variant"
-msgstr "Color"
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__color_number
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__color_number
+msgid "Color numbers"
+msgstr "Numero de colores"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__color_variant
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__color_variant
-msgid "Colors"
-msgstr "Colores"
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__color_ink_ids
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__color_ink_ids
+msgid "Colors ink"
+msgstr "Tinta color"
 
 #. module: rocafer_product_template
-#: model_terms:ir.actions.act_window,help:rocafer_product_template.color_variant_action
-msgid "Create a Color variant"
-msgstr "Crea una variante de color"
+#: model_terms:ir.actions.act_window,help:rocafer_product_template.color_ink_action
+msgid "Create a Color ink"
+msgstr "Crea un tinte de color"
 
 #. module: rocafer_product_template
 #: model_terms:ir.actions.act_window,help:rocafer_product_template.material_type_action
@@ -91,7 +129,7 @@ msgid "Create a new Stamping"
 msgstr "Crea una nueva estanpación"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_color_variant__create_uid
+#: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__create_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__create_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__create_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__create_uid
@@ -100,7 +138,7 @@ msgid "Created by"
 msgstr "Creado por"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_color_variant__create_date
+#: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__create_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__create_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__create_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__create_date
@@ -109,19 +147,13 @@ msgid "Created on"
 msgstr "Creado en"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__date_delivery
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__date_delivery
-msgid "Date delivery"
-msgstr "Fecha de entrega"
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__cut_cylinders
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__cut_cylinders
+msgid "Cut cylinders"
+msgstr "Cilindros de corte"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__date_order
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__date_order
-msgid "Date order"
-msgstr "Fecha pedido"
-
-#. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_color_variant__display_name
+#: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__display_name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__display_name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__display_name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__display_name
@@ -130,19 +162,31 @@ msgid "Display Name"
 msgstr "Nombre"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__figures
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__figures
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__troquel_figure
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__troquel_figure
 msgid "Figures"
 msgstr "Figuras"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_color_variant__id
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__h1_value
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__h1_value
+msgid "H1 Value"
+msgstr "H1 valor"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__h2_value
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__h2_value
+msgid "H2 Value"
+msgstr "H2 valor"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__id
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__id
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__id
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__id
 #: model:ir.model.fields,field_description:rocafer_product_template.field_varnish_type__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__image
@@ -153,7 +197,7 @@ msgstr "Imagen"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__image_orientation
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__image_orientation
 msgid "Imagen"
-msgstr ""
+msgstr "Imagen"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__inner_diameter_roll
@@ -162,18 +206,31 @@ msgid "Inner diameter roll"
 msgstr "Interior del rollo"
 
 #. module: rocafer_product_template
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
-msgid "Internal notes"
-msgstr "Notas internas"
-
-#. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__label_code
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__label_code
 msgid "Label code"
 msgstr "Código etiqueta"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_color_variant__write_uid
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__label_height
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__label_height
+msgid "Label height"
+msgstr "Alto etiqueta"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__label_width
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__label_width
+msgid "Label width"
+msgstr "Ancho etiqueta"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__laminated
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__laminated
+msgid "Laminated"
+msgstr "Plastificado"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__write_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__write_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__write_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__write_uid
@@ -182,7 +239,7 @@ msgid "Last Updated by"
 msgstr "Última actualización por"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_color_variant__write_date
+#: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__write_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__write_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__write_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__write_date
@@ -191,15 +248,13 @@ msgid "Last Updated on"
 msgstr "Última actualización en"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__maq_label
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__maq_label
-msgid "MAQ Label"
-msgstr "MAQ Etiquetas"
+#: model:ir.model.fields.selection,name:rocafer_product_template.selection__product_template__laminated__matte
+msgid "Mate"
+msgstr "Mate"
 
 #. module: rocafer_product_template
 #: model:ir.actions.act_window,name:rocafer_product_template.material_type_action
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__product_template_varnish_type
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
 msgid "Material"
 msgstr "Material"
 
@@ -217,33 +272,23 @@ msgid "Material type"
 msgstr "Material"
 
 #. module: rocafer_product_template
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
-msgid "More info"
-msgstr "Mas información"
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__material_width_separation
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__material_width_separation
+msgid "Material width separation"
+msgstr "Separación ancho de material"
 
 #. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
+msgid "Materials"
+msgstr "Materiales"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__res_partner_id
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__res_partner_id
 msgid "Name"
 msgstr "Nombre"
-
-#. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__num_order
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__num_order
-msgid "Number order"
-msgstr "Número orden"
-
-#. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__num_partner
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__num_partner
-msgid "Number partner"
-msgstr "Número de cliente"
-
-#. module: rocafer_product_template
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
-msgid "Order info"
-msgstr "Informacion del pedido"
 
 #. module: rocafer_product_template
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
@@ -254,6 +299,12 @@ msgstr "Orientación"
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.print_orientation_form
 msgid "Orientation name"
 msgstr "Nombre de la orientación"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__other_finishes
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__other_finishes
+msgid "Other finishes"
+msgstr "Otros acabados"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__outer_diameter_roll
@@ -267,10 +318,11 @@ msgid "Partner"
 msgstr "Cliente"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__num_order_partner
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__num_order_partner
-msgid "Partner order number"
-msgstr "Número de pedido del cliente"
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__preprint_comments
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__preprint_comments
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
+msgid "Preprint comments"
+msgstr "Comentarios preimpresión"
 
 #. module: rocafer_product_template
 #: model:ir.actions.act_window,name:rocafer_product_template.print_orientation_action
@@ -291,15 +343,16 @@ msgid "Print orientation"
 msgstr "Orientaciones"
 
 #. module: rocafer_product_template
-#: model:ir.model,name:rocafer_product_template.model_product_template
-msgid "Product"
-msgstr "Producto"
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__printing_cylinders
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__printing_cylinders
+msgid "Printing cylinders"
+msgstr "Cilindros de impresión"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__product_material
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__product_material
-msgid "Product Material"
-msgstr "Material del producto"
+#: model:ir.model,name:rocafer_product_template.model_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__product_template_id
+msgid "Product"
+msgstr "Producto"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__product_stamping
@@ -314,15 +367,43 @@ msgid "Product Varnish"
 msgstr "Barniz"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__product_template_ids
-msgid "Productos"
-msgstr ""
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__product_material
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__product_material
+msgid "Product material"
+msgstr "Material del producto"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__register_by
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__register_by
-msgid "Register by:"
-msgstr "Registrado por:"
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
+msgid "Production"
+msgstr "Producion"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__product_template_ids
+msgid "Productos"
+msgstr "Productos"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__regulatory_council_numbering
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__regulatory_council_numbering
+msgid "Regulatory council numbering"
+msgstr "Numeracion consejo regulador"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__relief
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__relief
+msgid "Relief"
+msgstr "Relieve"
+
+#. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
+msgid "Reviewers expedition"
+msgstr "Revisadores expedición"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__reviewers_expedition
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__reviewers_expedition
+msgid "Reviewers/Expedition"
+msgstr "Revisadores/Expedición"
 
 #. module: rocafer_product_template
 #: model:ir.ui.menu,name:rocafer_product_template.menu_rocafer
@@ -335,10 +416,10 @@ msgid "Rocafer data"
 msgstr "Datos Rocafer"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__size
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__size
-msgid "Size"
-msgstr "Tamaño"
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__serigraphy
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__serigraphy
+msgid "Serigraphy"
+msgstr "Serigrafia"
 
 #. module: rocafer_product_template
 #: model:ir.actions.act_window,name:rocafer_product_template.stamping_action
@@ -357,8 +438,8 @@ msgstr "Nombre estampación"
 
 #. module: rocafer_product_template
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
-msgid "This note is only for internal purposes."
-msgstr "Esta nota es sólo para fines internos."
+msgid "Troquel"
+msgstr "Troquel"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__troquel_number
@@ -386,19 +467,13 @@ msgid "Varnish type"
 msgstr "Barniz"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__x_width
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__x_width
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__assembly_figure_y
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__assembly_figure_y
 msgid "X Width"
-msgstr "X"
+msgstr "X Ancho"
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__y_height
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__y_height
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__assembly_figure_x
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__assembly_figure_x
 msgid "Y height"
-msgstr "Y"
-
-#. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__z_imp_cor
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__z_imp_cor
-msgid "Z. IMP./COR."
-msgstr ""
+msgstr "Y Alto"

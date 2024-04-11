@@ -2,27 +2,27 @@
 <odoo>
 
     <!-- Definicion de la vista-->
-    <record id="color_variant_action" model="ir.actions.act_window">
+    <record id="color_ink_action" model="ir.actions.act_window">
         <field name="name">Color</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,form</field>
-        <field name="res_model">color.variant</field>
+        <field name="res_model">color.ink</field>
         <field name="help" type="html">
-            <tree string="Color variant">
+            <tree string="Color ink">
                 <field name="name"/>
             </tree>
             <p class="o_view_nocontent_smiling_face">
-                Create a Color variant
+                Create a Color ink
             </p>
         </field>
     </record>
 
     <!--Formulario de edicion-->
-    <record id="color_variant_form" model="ir.ui.view">
-        <field name="name">color.variant.form</field>
-        <field name="model">color.variant</field>
+    <record id="color_ink_form" model="ir.ui.view">
+        <field name="name">color.ink.form</field>
+        <field name="model">color.ink</field>
         <field name="arch" type="xml">
-        <form string="Color variant">
+        <form string="Color ink">
             <sheet>
                 <group >
                     <field name="name" placeholder="Color name"/>
@@ -40,8 +40,8 @@
     />
 
     <menuitem id="color_menu"
-              name="Color variant"
-              action="color_variant_action"
+              name="Color ink"
+              action="color_ink_action"
               parent="menu_rocafer" sequence="1"/>
 
 </odoo>

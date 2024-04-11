@@ -15,7 +15,7 @@
     "data": [
         'views/product_template_view.xml',
         'views/varnish_type_view.xml',
-        'views/color_variant_view.xml',
+        'views/color_ink_view.xml',
         'views/stamping_option_view.xml',
         'views/print_orientation_view.xml',
         'views/material_type_view.xml',
