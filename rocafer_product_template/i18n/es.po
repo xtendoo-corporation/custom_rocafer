@@ -121,7 +121,7 @@ msgstr "Crea una opción de barniz"
 #. module: rocafer_product_template
 #: model_terms:ir.actions.act_window,help:rocafer_product_template.stamping_action
 msgid "Create a new Stamping"
-msgstr "Crea una nueva estanpación"
+msgstr "Crea una nueva estampación"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__create_uid
