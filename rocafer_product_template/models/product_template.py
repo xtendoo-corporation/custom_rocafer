@@ -105,7 +105,7 @@ class Product(models.Model):
     @api.onchange('amount', 'advance_label_separation')
     def _calculate_amount(self):
         for record in self:
-            record.amount_labels = record.amount * record.advance_label_separation / 1000.00
+            record.amount_labels = record.amount / 1000.00 * record.advance_label_separation
 
     advance_label_separation = fields.Float(
         string='Advance label separation',

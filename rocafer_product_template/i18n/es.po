@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 12:49+0000\n"
-"PO-Revision-Date: 2024-04-11 12:49+0000\n"
+"POT-Creation-Date: 2024-04-12 11:49+0000\n"
+"PO-Revision-Date: 2024-04-12 11:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "Agregue comentarios de administración interna aquí."
 #. module: rocafer_product_template
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
 msgid "Add internal comments about the preprint here."
-msgstr ""
+msgstr "Agregue comentarios internos sobre la preimpresión aquí."
 
 #. module: rocafer_product_template
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
@@ -112,11 +112,6 @@ msgstr "Crea un tinte de color"
 #: model_terms:ir.actions.act_window,help:rocafer_product_template.material_type_action
 msgid "Create a Material type"
 msgstr "Crea el tipo de material"
-
-#. module: rocafer_product_template
-#: model_terms:ir.actions.act_window,help:rocafer_product_template.print_orientation_action
-msgid "Create a Print orientation"
-msgstr "Crear una imagen de orientacion"
 
 #. module: rocafer_product_template
 #: model_terms:ir.actions.act_window,help:rocafer_product_template.varnish_action
@@ -408,7 +403,7 @@ msgstr "Revisadores/Expedición"
 #. module: rocafer_product_template
 #: model:ir.ui.menu,name:rocafer_product_template.menu_rocafer
 msgid "Rocafer"
-msgstr ""
+msgstr "Rocafer"
 
 #. module: rocafer_product_template
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view

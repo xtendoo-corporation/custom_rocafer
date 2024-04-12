@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="orientation1" model="print.orientation">
+            <field name="name">Orientacion 1</field>
+            <field name="image" type="base64"
+                   file="rocafer_product_template/static/img/orientacion1.png"/>
+        </record>
+        <record id="orientation2" model="print.orientation">
+            <field name="name">Orientacion 2</field>
+            <field name="image" type="base64"
+                   file="rocafer_product_template/static/img/orientacion2.png"/>
+        </record>
+        <record id="orientation3" model="print.orientation">
+            <field name="name">Orientacion 3</field>
+            <field name="image" type="base64"
+                   file="rocafer_product_template/static/img/orientacion3.png"/>
+        </record>
+        <record id="orientation4" model="print.orientation">
+            <field name="name">Orientacion 4</field>
+            <field name="image" type="base64"
+                   file="rocafer_product_template/static/img/orientacion4.png"/>
+        </record>
+        <record id="orientation5" model="print.orientation">
+            <field name="name">Orientacion 5</field>
+            <field name="image" type="base64"
+                   file="rocafer_product_template/static/img/orientacion5.png"/>
+        </record>
+        <record id="orientation6" model="print.orientation">
+            <field name="name">Orientacion 6</field>
+            <field name="image" type="base64"
+                   file="rocafer_product_template/static/img/orientacion6.png"/>
+        </record>
+        <record id="orientation7" model="print.orientation">
+            <field name="name">Orientacion 7</field>
+            <field name="image" type="base64"
+                   file="rocafer_product_template/static/img/orientacion7.png"/>
+        </record>
+        <record id="orientation8" model="print.orientation">
+            <field name="name">Orientacion 8</field>
+            <field name="image" type="base64"
+                   file="rocafer_product_template/static/img/orientacion8.png"/>
+        </record>
+        <record id="indifferent" model="print.orientation">
+            <field name="name">Indiferente</field>
+            <field name="image" type="base64"
+                   file="rocafer_product_template/static/img/indifferent.png"/>
+        </record>
+
+        <record id="shine" model="varnish.type">
+            <field name="name">Brillo</field>
+        </record>
+        <record id="matte" model="varnish.type">
+            <field name="name">Mate</field>
+        </record>
+        <record id="irrepressible_shine" model="varnish.type">
+            <field name="name">Brillo irreprimible</field>
+        </record>
+        <record id="matte_print" model="varnish.type">
+            <field name="name">Mate imprimirle</field>
+        </record>
+        <record id="release_varnish" model="varnish.type">
+            <field name="name">Barniz realease</field>
+        </record>
+
+    </data>
+</odoo>

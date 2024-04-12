@@ -19,6 +19,7 @@
         'views/stamping_option_view.xml',
         'views/print_orientation_view.xml',
         'views/material_type_view.xml',
+        'data/rocafer_data.xml',
         'security/ir.model.access.csv',
     ],
     "installable": True,

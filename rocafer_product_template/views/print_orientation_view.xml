@@ -11,9 +11,9 @@
             <tree string="Print orientation">
                 <field name="name"/>
             </tree>
-            <p class="o_view_nocontent_smiling_face">
-                Create a Print orientation
-            </p>
+<!--            <p class="o_view_nocontent_smiling_face">-->
+<!--                Create a Print orientation-->
+<!--            </p>-->
         </field>
     </record>
 
