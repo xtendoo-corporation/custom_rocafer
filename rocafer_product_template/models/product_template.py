@@ -7,9 +7,6 @@ from odoo import fields, models, api
 class Product(models.Model):
     _inherit = 'product.template'
 
-    support_separation = 1.5*2
-    coastal = 7.5*2
-
     res_partner_id = fields.Many2one(
         comodel_name='res.partner',
         string='Name',
@@ -83,12 +80,10 @@ class Product(models.Model):
     )
 
     h1_value = fields.Float(
-        default=support_separation,
         string='H1 Value',
     )
 
     h2_value = fields.Float(
-        default=coastal,
         string='H2 Value',
     )
 
@@ -134,9 +129,9 @@ class Product(models.Model):
         string='Product material',
     )
 
-    color_number = fields.Integer(
-        string='Color numbers'
-    )
+    # color_number = fields.Integer(
+    #     string='Color numbers'
+    # )
 
     amount_label_exit = fields.Integer(
         string='Amount label exit'

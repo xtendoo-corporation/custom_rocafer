@@ -57,7 +57,7 @@
                     <group string="Materials">
                         <group>
                             <field name="product_material"/>
-                            <field name="color_number"/>
+<!--                            <field name="color_number"/>-->
                             <field name="product_varnish" options="{'no_create': True}"/>
                             <field name="color_ink_ids" widget="one2many_list" mode="tree">
                                 <tree editable="bottom">
