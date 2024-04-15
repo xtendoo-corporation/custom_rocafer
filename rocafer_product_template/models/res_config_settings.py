@@ -13,9 +13,9 @@ class ResConfigSettings(models.TransientModel):
     )
 
     h2_value_field = fields.Float(
-      #  default=coastal,
         string='H2 Value',
-        # related="product_template_id.h2_value",
+        related="company_id.h2_value",
+        readonly=False,
     )
 
     # frutas_dominguez_garrido_website_price_default_message = fields.Char(

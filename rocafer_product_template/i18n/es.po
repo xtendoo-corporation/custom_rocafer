@@ -63,7 +63,7 @@ msgstr "Cantidad etiqueta salida"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__amount_labels
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__amount_labels
 msgid "Amount labels"
-msgstr "Etiquetas de cantidad"
+msgstr "Cantidad de etiquetas"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields.selection,name:rocafer_product_template.selection__product_template__laminated__gloss

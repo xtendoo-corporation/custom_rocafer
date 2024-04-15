@@ -10,6 +10,10 @@
                         <label for="h1_value_field" class="col-lg-4 o_light_label"/>
                         <field name="h1_value_field"/>
                     </div>
+                    <div class="row">
+                        <label for="h2_value_field" class="col-lg-4 o_light_label"/>
+                        <field name="h2_value_field"/>
+                    </div>
                 </block>
             </block>
         </field>

@@ -85,6 +85,7 @@ class Product(models.Model):
     )
     h2_value = fields.Float(
         string='H2 Value',
+        default=lambda self: self.env.company.h2_value,
     )
 
     amount = fields.Float(

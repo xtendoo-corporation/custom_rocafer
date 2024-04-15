@@ -10,3 +10,8 @@ class res_company(models.Model):
         string='H1 Value',
         default=3.00,
     )
+
+    h2_value = fields.Float(
+        string='H2 Value',
+        default=15.00,
+    )
