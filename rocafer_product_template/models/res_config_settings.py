@@ -7,9 +7,9 @@ class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     h1_value_field = fields.Float(
-     #   default=support_separation,
         string='H1 Value',
-        # related="company_id.h1_value",
+        related="company_id.h1_value",
+        readonly=False,
     )
 
     h2_value_field = fields.Float(

@@ -81,8 +81,8 @@ class Product(models.Model):
 
     h1_value = fields.Float(
         string='H1 Value',
+        default=lambda self: self.env.company.h1_value,
     )
-
     h2_value = fields.Float(
         string='H2 Value',
     )

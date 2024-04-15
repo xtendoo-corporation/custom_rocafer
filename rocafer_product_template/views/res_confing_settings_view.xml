@@ -6,7 +6,10 @@
         <field name="arch" type="xml">
             <block name="product_setting_container" position="before">
                 <block title="Product Rocafer" name="product_rocafer">
-                        <field name="h1_value_field" class="oe_inline"/>
+                    <div class="row">
+                        <label for="h1_value_field" class="col-lg-4 o_light_label"/>
+                        <field name="h1_value_field"/>
+                    </div>
                 </block>
             </block>
         </field>
