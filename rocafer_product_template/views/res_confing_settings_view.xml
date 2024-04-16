@@ -6,14 +6,12 @@
         <field name="arch" type="xml">
             <block name="product_setting_container" position="before">
                 <block title="Product Rocafer" name="product_rocafer">
-                    <div class="row">
-                        <label for="h1_value_field" class="col-lg-4 o_light_label"/>
-                        <field name="h1_value_field"/>
-                    </div>
-                    <div class="row">
-                        <label for="h2_value_field" class="col-lg-4 o_light_label"/>
-                        <field name="h2_value_field"/>
-                    </div>
+                    <setting help="Default stand separation">
+                        <field name="h1_value_field" class="oe_inline"/>
+                    </setting>
+                    <setting help="Coastal default measurement">
+                        <field name="h2_value_field" class="oe_inline"/>
+                    </setting>
                 </block>
             </block>
         </field>

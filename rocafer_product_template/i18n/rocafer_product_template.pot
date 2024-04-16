@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-12 11:49+0000\n"
-"PO-Revision-Date: 2024-04-12 11:49+0000\n"
+"POT-Creation-Date: 2024-04-16 06:38+0000\n"
+"PO-Revision-Date: 2024-04-16 06:38+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -71,6 +71,11 @@ msgid "Brillo"
 msgstr ""
 
 #. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.res_confing_settings_view_form
+msgid "Coastal default measurement"
+msgstr ""
+
+#. module: rocafer_product_template
 #: model:ir.actions.act_window,name:rocafer_product_template.color_ink_action
 msgid "Color"
 msgstr ""
@@ -92,15 +97,19 @@ msgid "Color name"
 msgstr ""
 
 #. module: rocafer_product_template
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__color_number
-#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__color_number
-msgid "Color numbers"
-msgstr ""
-
-#. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__color_ink_ids
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__color_ink_ids
 msgid "Colors ink"
+msgstr ""
+
+#. module: rocafer_product_template
+#: model:ir.model,name:rocafer_product_template.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: rocafer_product_template
+#: model:ir.model,name:rocafer_product_template.model_res_config_settings
+msgid "Config Settings"
 msgstr ""
 
 #. module: rocafer_product_template
@@ -148,6 +157,11 @@ msgid "Cut cylinders"
 msgstr ""
 
 #. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.res_confing_settings_view_form
+msgid "Default stand separation"
+msgstr ""
+
+#. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__display_name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__display_name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__display_name
@@ -165,12 +179,16 @@ msgstr ""
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__h1_value
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__h1_value
+#: model:ir.model.fields,field_description:rocafer_product_template.field_res_company__h1_value
+#: model:ir.model.fields,field_description:rocafer_product_template.field_res_config_settings__h1_value_field
 msgid "H1 Value"
 msgstr ""
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__h2_value
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__h2_value
+#: model:ir.model.fields,field_description:rocafer_product_template.field_res_company__h2_value
+#: model:ir.model.fields,field_description:rocafer_product_template.field_res_config_settings__h2_value_field
 msgid "H2 Value"
 msgstr ""
 
@@ -347,6 +365,11 @@ msgstr ""
 #: model:ir.model,name:rocafer_product_template.model_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__product_template_id
 msgid "Product"
+msgstr ""
+
+#. module: rocafer_product_template
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.res_confing_settings_view_form
+msgid "Product Rocafer"
 msgstr ""
 
 #. module: rocafer_product_template
