@@ -45,11 +45,11 @@ class Product(models.Model):
     )
 
     assembly_figure_x = fields.Integer(
-        string='Y height'
+        string='X width'
     )
 
     assembly_figure_y = fields.Integer(
-        string='X Width'
+        string='Y height'
     )
 
     troquel_figure = fields.Integer(
@@ -88,20 +88,20 @@ class Product(models.Model):
         default=lambda self: self.env.company.h2_value,
     )
 
-    amount = fields.Float(
+    amount = fields.Integer(
         string='Amount',
     )
 
-    amount_labels = fields.Float(
-        string='Amount labels',
-        compute='_calculate_amount',
+    linear_meters = fields.Integer(
+        string='Linear meters',
+        compute='_calculate_meters',
         store=True
     )
 
-    @api.onchange('amount', 'advance_label_separation')
-    def _calculate_amount(self):
+    @api.depends('amount', 'assembly_figure_x')
+    def _calculate_meters(self):
         for record in self:
-            record.amount_labels = record.amount / 1000.00 * record.advance_label_separation
+            record.linear_meters = record.amount / record.assembly_figure_x
 
     advance_label_separation = fields.Float(
         string='Advance label separation',
@@ -114,7 +114,7 @@ class Product(models.Model):
         for record in self:
             record.advance_label_separation = record.label_width + record.h1_value
 
-    material_width_separation = fields.Float(
+    material_width_separation = fields.Integer(
         string='Material width separation',
         compute='_calculate_material_width_separation',
         store=True
@@ -138,11 +138,11 @@ class Product(models.Model):
         string='Amount label exit'
     )
 
-    inner_diameter_roll = fields.Float(
+    inner_diameter_roll = fields.Integer(
         string='Inner diameter roll'
     )
 
-    outer_diameter_roll = fields.Float(
+    outer_diameter_roll = fields.Integer(
         string='Outer diameter roll'
     )
 

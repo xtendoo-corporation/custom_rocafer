@@ -51,7 +51,7 @@
                             <field name="advance_label_separation"/>
                             <field name="material_width_separation"/>
                             <field name="amount"/>
-                            <field name="amount_labels" readonly="0"/>
+                            <field name="linear_meters" readonly="0"/>
                         </group>
                     </group>
                     <group string="Materials">
