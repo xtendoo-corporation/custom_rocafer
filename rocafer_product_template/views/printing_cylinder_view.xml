@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Definicion de la vista-->
+    <record id="printing_cylinder_action" model="ir.actions.act_window">
+        <field name="name">Printing cylinder</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">printing.cylinder</field>
+        <field name="help" type="html">
+            <tree string="Printing cylinder">
+                <field name="name"/>
+            </tree>
+            <p class="o_view_nocontent_smiling_face">
+                Create a Printing cylinder
+            </p>
+        </field>
+    </record>
+
+    <!--Formulario de edicion-->
+    <record id="printing_cylinder_form" model="ir.ui.view">
+        <field name="name">printing.cylinder.form</field>
+        <field name="model">printing.cylinder</field>
+        <field name="arch" type="xml">
+        <form string="Printing cylinder">
+            <sheet>
+                <group >
+                    <field name="name" placeholder="Printing cylinder"/>
+                    <field name="z_impression_cylinder"/>
+                    <field name="z_magnetic_cut"/>
+                    <field name="printing_cylinder_line"/>
+                </group>
+            </sheet>
+        </form>
+        </field>
+    </record>
+
+<!--     Boton de actions dentro de  -->
+    <menuitem id="menu_rocafer"
+              name="Rocafer"
+              parent="stock.menu_stock_config_settings"
+              sequence="60"
+    />
+
+    <menuitem id="printing_cylinder_menu"
+              name="Printing cylinder"
+              action="printing_cylinder_action"
+              parent="menu_rocafer" sequence="8"/>
+
+</odoo>
