@@ -20,38 +20,31 @@ class PrintingCylinder(models.Model):
         string="Z Magnetic Cut"
     )
 
-    printing_cylinder_line = fields.One2many(
+    printing_cylinder_line_ids = fields.One2many(
         comodel_name='printing.cylinder.line',
-        inverse_name='value',
+        inverse_name='printing_cylinder_id',
         string='Cylinder size'
     )
+
+    @api.model
+    def name_get(self):
+        result = []
+        for rec in self:
+            name = f"[{rec.name}] {rec.z_impression_cylinder} ({rec.z_magnetic_cut})"
+            result.append((rec.id, name))
+        return result
 
 
 class CylinderLine(models.Model):
     _name = "printing.cylinder.line"
     _description = "Cylinder line"
 
-    value = fields.Integer(
-        string="Value"
+    printing_cylinder_id = fields.Many2one(
+        comodel_name='printing.cylinder',
+        string='Printing cylinder'
     )
 
-    #--------------------------------------------ANTIGUO------------------------------------------------------
-    #el campo a calcular se muestra en
-    #advance_label_separation
-
-    # @api.depends('colum_1', 'colum_2', 'colum_3', 'colum_4', 'colum_5', 'colum_6', 'colum_7', 'colum_8', 'colum_9', 'colum_10', 'colum_11', 'colum_12', 'colum_13', 'colum_14')
-    # def _compute_correct_size(self):
-    #     for record in self:
-    #         values = [record[f'colum_{i}'] for i in range(1, 15)]
-    #         values.sort()
-    #         for value in range(0, len(values)):
-    #             if value >= record.correct_size:
-    #                 if value == record.correct_size:
-    #                     closest_greater = value
-    #
-    #         if closest_greater is None:
-    #             record.correct_size = 0
-    #         else:
-    #             record.correct_size = closest_greater
-
+    size = fields.Float(
+        string="Value"
+    )
 

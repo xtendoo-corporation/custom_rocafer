@@ -46,6 +46,7 @@
                             <field name="label_height"/>
                             <field name="h1_value"/>
                             <field name="h2_value"/>
+                            <field name="printing_cylinder_id"/>
                         </group>
                         <group>
                             <field name="advance_label_separation"/>
@@ -60,7 +61,7 @@
 <!--                            <field name="color_number"/>-->
                             <field name="product_varnish" options="{'no_create': True}"/>
                             <field name="color_ink_ids" widget="one2many_list" mode="tree">
-                                <tree editable="bottom">
+                                <tree options="{'no_create': True}">
                                     <field name="name"/>
                                 </tree>
                             </field>

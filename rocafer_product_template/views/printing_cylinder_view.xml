@@ -22,20 +22,24 @@
         <field name="name">printing.cylinder.form</field>
         <field name="model">printing.cylinder</field>
         <field name="arch" type="xml">
-        <form string="Printing cylinder">
-            <sheet>
-                <group >
-                    <field name="name" placeholder="Printing cylinder"/>
-                    <field name="z_impression_cylinder"/>
-                    <field name="z_magnetic_cut"/>
-                    <field name="printing_cylinder_line"/>
-                </group>
-            </sheet>
-        </form>
+            <form string="Printing cylinder">
+                <sheet>
+                    <group>
+                        <field name="name" placeholder="Printing cylinder"/>
+                        <field name="z_impression_cylinder"/>
+                        <field name="z_magnetic_cut"/>
+                        <field name="printing_cylinder_line_ids" widget="one2many_list" mode="tree">
+                            <tree editable="bottom">
+                                <field name="size"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
         </field>
     </record>
 
-<!--     Boton de actions dentro de  -->
+    <!--     Boton de actions dentro de  -->
     <menuitem id="menu_rocafer"
               name="Rocafer"
               parent="stock.menu_stock_config_settings"
