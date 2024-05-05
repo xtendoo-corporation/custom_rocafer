@@ -100,7 +100,8 @@ class Product(models.Model):
 
     @api.depends('amount', 'assembly_figure_x')
     def _compute_meters(self):
-        for record in self:
+        self.linear_meters = 0
+        for record in self.filtered(lambda r: r.assembly_figure_x):
             record.linear_meters = record.amount / record.assembly_figure_x
 
     advance_label_separation = fields.Float(
