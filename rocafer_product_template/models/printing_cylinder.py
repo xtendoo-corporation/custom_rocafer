@@ -26,14 +26,6 @@ class PrintingCylinder(models.Model):
         string='Cylinder size'
     )
 
-    @api.model
-    def name_get(self):
-        result = []
-        for rec in self:
-            name = f"[{rec.name}] {rec.z_impression_cylinder} ({rec.z_magnetic_cut})"
-            result.append((rec.id, name))
-        return result
-
 
 class CylinderLine(models.Model):
     _name = "printing.cylinder.line"

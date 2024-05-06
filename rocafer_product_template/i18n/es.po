@@ -556,7 +556,7 @@ msgstr "Y Alto"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__z_impression_cylinder
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__z_impression_cylinder
 msgid "Z Impression cylinder"
-msgstr "Z Cilindro imrpesión"
+msgstr "Z Cilindro impresión"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__z_magnetic_cut

@@ -59,8 +59,8 @@
                             <field name="printing_cylinder_id"/>
                         </group>
                         <group>
-                            <field name="z_impression_cylinder" readonly="1"/>
-                            <field name="z_magnetic_cut" readonly="1"/>
+                            <field name="z_impression_cylinder"/>
+                            <field name="z_magnetic_cut"/>
                         </group>
                     </group>
                     <group string="Materials">

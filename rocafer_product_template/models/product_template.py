@@ -121,6 +121,8 @@ class Product(models.Model):
             line_id = self.env['printing.cylinder.line'].search([('size', '>=', record.advance_label_separation)], limit=1, order='size asc')
             if line_id:
                 record.printing_cylinder_id = line_id.printing_cylinder_id
+            else:
+                record.printing_cylinder_id = False
 
     printing_cylinder_id = fields.Many2one(
         comodel_name="printing.cylinder",
@@ -134,10 +136,13 @@ class Product(models.Model):
             line_id = self.env['printing.cylinder.line'].search([('size', '>=', record.advance_label_separation)],limit=1, order='size asc')
             if line_id:
                 record.printing_cylinder_size = line_id.size
+            else:
+                record.printing_cylinder_size = 0
 
     printing_cylinder_size = fields.Float(
         string="Cylinder size",
         compute='_compute_printing_cylinder_size',
+        store=True
     )
 
     @api.onchange('printing_cylinder_id')
@@ -147,7 +152,8 @@ class Product(models.Model):
 
     z_impression_cylinder = fields.Integer(
         string="Z Impression cylinder",
-        default=_compute_z_impression_cylinder,
+        compute="_compute_z_impression_cylinder",
+        store=True
     )
 
     @api.onchange('printing_cylinder_id')
@@ -157,7 +163,8 @@ class Product(models.Model):
 
     z_magnetic_cut = fields.Integer(
         string="Z Magnetic Cut",
-        default=_compute_printing_cylinder_id,
+        compute="_compute_printing_cylinder_id",
+        store=True
     )
 
     material_width_separation = fields.Integer(
