@@ -12,11 +12,11 @@ class PrintingCylinder(models.Model):
         string="Machine name"
     )
 
-    z_impression_cylinder = fields.Char(
+    z_impression_cylinder = fields.Integer(
         string="Z Impression cylinder"
     )
 
-    z_magnetic_cut = fields.Char(
+    z_magnetic_cut = fields.Integer(
         string="Z Magnetic Cut"
     )
 

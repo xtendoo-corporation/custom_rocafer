@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-02 10:09+0000\n"
-"PO-Revision-Date: 2024-05-02 10:09+0000\n"
+"POT-Creation-Date: 2024-05-06 09:30+0000\n"
+"PO-Revision-Date: 2024-05-06 09:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -117,6 +117,11 @@ msgid "Create a Material type"
 msgstr "Crea el tipo de material"
 
 #. module: rocafer_product_template
+#: model_terms:ir.actions.act_window,help:rocafer_product_template.printing_cylinder_action
+msgid "Create a Printing cylinder"
+msgstr "Crear un cilindro de impresión"
+
+#. module: rocafer_product_template
 #: model_terms:ir.actions.act_window,help:rocafer_product_template.varnish_action
 msgid "Create a Varnish option"
 msgstr "Crea una opción de barniz"
@@ -130,6 +135,8 @@ msgstr "Crea una nueva estampación"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__create_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__create_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__create_uid
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__create_uid
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder_line__create_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__create_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_varnish_type__create_uid
 msgid "Created by"
@@ -139,6 +146,8 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__create_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__create_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__create_date
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__create_date
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder_line__create_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__create_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_varnish_type__create_date
 msgid "Created on"
@@ -151,6 +160,18 @@ msgid "Cut cylinders"
 msgstr "Cilindros de corte"
 
 #. module: rocafer_product_template
+#: model:ir.model,name:rocafer_product_template.model_printing_cylinder_line
+msgid "Cylinder line"
+msgstr "Línea de cilindros"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__printing_cylinder_line_ids
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__printing_cylinder_size
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__printing_cylinder_size
+msgid "Cylinder size"
+msgstr "Tamaño del cilindro"
+
+#. module: rocafer_product_template
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.res_confing_settings_view_form
 msgid "Default stand separation"
 msgstr "Separación predeterminada del soporte"
@@ -159,6 +180,8 @@ msgstr "Separación predeterminada del soporte"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__display_name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__display_name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__display_name
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__display_name
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder_line__display_name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__display_name
 #: model:ir.model.fields,field_description:rocafer_product_template.field_varnish_type__display_name
 msgid "Display Name"
@@ -190,6 +213,8 @@ msgstr "H2 valor"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__id
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__id
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__id
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__id
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder_line__id
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__id
 #: model:ir.model.fields,field_description:rocafer_product_template.field_varnish_type__id
 msgid "ID"
@@ -240,6 +265,8 @@ msgstr "Plastificado"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__write_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__write_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__write_uid
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__write_uid
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder_line__write_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__write_uid
 #: model:ir.model.fields,field_description:rocafer_product_template.field_varnish_type__write_uid
 msgid "Last Updated by"
@@ -249,6 +276,8 @@ msgstr "Última actualización por"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_color_ink__write_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_material_type__write_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__write_date
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__write_date
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder_line__write_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_stamping_option__write_date
 #: model:ir.model.fields,field_description:rocafer_product_template.field_varnish_type__write_date
 msgid "Last Updated on"
@@ -259,6 +288,17 @@ msgstr "Última actualización en"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__linear_meters
 msgid "Linear meters"
 msgstr "Metros lineales"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__printing_cylinder_id
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__printing_cylinder_id
+msgid "Machine"
+msgstr "Máquina"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__name
+msgid "Machine name"
+msgstr "Máquina"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields.selection,name:rocafer_product_template.selection__product_template__laminated__matte
@@ -354,6 +394,16 @@ msgstr "Orientaciones"
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.print_orientation_form
 msgid "Print orientation"
 msgstr "Orientaciones"
+
+#. module: rocafer_product_template
+#: model:ir.actions.act_window,name:rocafer_product_template.printing_cylinder_action
+#: model:ir.model,name:rocafer_product_template.model_printing_cylinder
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder_line__printing_cylinder_id
+#: model:ir.ui.menu,name:rocafer_product_template.printing_cylinder_menu
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.printing_cylinder_form
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
+msgid "Printing cylinder"
+msgstr "Cilindro de impresión"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__printing_cylinders
@@ -466,6 +516,11 @@ msgid "Troquel number"
 msgstr "Número de Troquel"
 
 #. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder_line__size
+msgid "Value"
+msgstr "Valor"
+
+#. module: rocafer_product_template
 #: model:ir.actions.act_window,name:rocafer_product_template.varnish_action
 #: model:ir.model.fields,field_description:rocafer_product_template.field_varnish_type__product_template_varnish_type
 msgid "Varnish"
@@ -495,3 +550,17 @@ msgstr "X Ancho"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__assembly_figure_y
 msgid "Y height"
 msgstr "Y Alto"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__z_impression_cylinder
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__z_impression_cylinder
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__z_impression_cylinder
+msgid "Z Impression cylinder"
+msgstr "Z Cilindro imrpesión"
+
+#. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__z_magnetic_cut
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__z_magnetic_cut
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__z_magnetic_cut
+msgid "Z Magnetic Cut"
+msgstr "Z Magnético Corte"

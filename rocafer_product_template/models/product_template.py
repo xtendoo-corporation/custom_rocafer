@@ -115,40 +115,50 @@ class Product(models.Model):
         for record in self:
             record.advance_label_separation = record.label_width + record.h1_value
 
-    @api.onchange('advance_label_separation')
+    @api.onchange('label_width', 'h1_value')
     def _compute_printing_cylinder_id(self):
         for record in self:
             line_id = self.env['printing.cylinder.line'].search([('size', '>=', record.advance_label_separation)], limit=1, order='size asc')
-            print("*" * 80)
-            print(line_id)
             if line_id:
                 record.printing_cylinder_id = line_id.printing_cylinder_id
 
     printing_cylinder_id = fields.Many2one(
         comodel_name="printing.cylinder",
-        string="Máquina",
+        string="Machine",
         default=_compute_printing_cylinder_id,
     )
 
-    # z_impression_cylinder = fields.One2many(
-    #     comodel_name="printing.cylinder",
-    #     string="Z Cilindro imrpesión",
-    #     default=_compute_printing_cylinder_id.z_impression_cylinder,
-    # )
-    #
-    # z_magnetic_cut = fields.One2many(
-    #     comodel_name="printing.cylinder",
-    #     string="Z Magnético Corte",
-    #     default=_compute_printing_cylinder_id.z_magnetic_cut,
-    # )
-    #
-    # printing_cylinder_size = fields.Many2one(
-    #     comodel_name="printing.cylinder",
-    #     string="Cylinder size",
-    #     default=_compute_printing_cylinder_id.printing_cylinder_size,
-    # )
+    @api.onchange('label_width', 'h1_value')
+    def _compute_printing_cylinder_size(self):
+        for record in self:
+            line_id = self.env['printing.cylinder.line'].search([('size', '>=', record.advance_label_separation)],limit=1, order='size asc')
+            if line_id:
+                record.printing_cylinder_size = line_id.size
 
-    #*****************
+    printing_cylinder_size = fields.Float(
+        string="Cylinder size",
+        compute='_compute_printing_cylinder_size',
+    )
+
+    @api.onchange('printing_cylinder_id')
+    def _compute_z_impression_cylinder(self):
+        for record in self:
+            record.z_impression_cylinder = record.printing_cylinder_id.z_impression_cylinder
+
+    z_impression_cylinder = fields.Integer(
+        string="Z Impression cylinder",
+        default=_compute_z_impression_cylinder,
+    )
+
+    @api.onchange('printing_cylinder_id')
+    def _compute_z_magnetic_cut(self):
+        for record in self:
+            record.z_magnetic_cut = record.printing_cylinder_id.z_magnetic_cut
+
+    z_magnetic_cut = fields.Integer(
+        string="Z Magnetic Cut",
+        default=_compute_printing_cylinder_id,
+    )
 
     material_width_separation = fields.Integer(
         string='Material width separation',
