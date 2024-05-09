@@ -118,11 +118,10 @@ class Product(models.Model):
     @api.onchange('label_width', 'h1_value')
     def _compute_printing_cylinder_id(self):
         for record in self:
-            line_id = self.env['printing.cylinder.line'].search([('size', '>=', record.advance_label_separation)], limit=1, order='size asc')
-            if line_id:
-                record.printing_cylinder_id = line_id.printing_cylinder_id
-            else:
-                record.printing_cylinder_id = False
+            line_id = self.env['printing.cylinder.line'].search(
+                [('size', '>=', record.advance_label_separation)], limit=1, order='size asc'
+            )
+            record.printing_cylinder_id = line_id.printing_cylinder_id if line_id else False
 
     printing_cylinder_id = fields.Many2one(
         comodel_name="printing.cylinder",
@@ -132,12 +131,13 @@ class Product(models.Model):
 
     @api.onchange('label_width', 'h1_value')
     def _compute_printing_cylinder_size(self):
+        self.printing_cylinder_size = 0
         for record in self:
-            line_id = self.env['printing.cylinder.line'].search([('size', '>=', record.advance_label_separation)],limit=1, order='size asc')
+            line_id = self.env['printing.cylinder.line'].search(
+                [('size', '>=', record.advance_label_separation)], limit=1, order='size asc'
+            )
             if line_id:
                 record.printing_cylinder_size = line_id.size
-            else:
-                record.printing_cylinder_size = 0
 
     printing_cylinder_size = fields.Float(
         string="Cylinder size",
@@ -152,8 +152,7 @@ class Product(models.Model):
 
     z_impression_cylinder = fields.Integer(
         string="Z Impression cylinder",
-        compute="_compute_z_impression_cylinder",
-        store=True
+        related="printing_cylinder_id.z_impression_cylinder",
     )
 
     @api.onchange('printing_cylinder_id')
@@ -163,8 +162,7 @@ class Product(models.Model):
 
     z_magnetic_cut = fields.Integer(
         string="Z Magnetic Cut",
-        compute="_compute_printing_cylinder_id",
-        store=True
+        related="printing_cylinder_id.z_magnetic_cut",
     )
 
     material_width_separation = fields.Integer(

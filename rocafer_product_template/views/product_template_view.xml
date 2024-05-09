@@ -48,8 +48,8 @@
                             <field name="h2_value"/>
                         </group>
                         <group>
-                            <field name="printing_cylinder_size" readonly="0"/>
-                            <field name="material_width_separation"/>
+                            <field name="printing_cylinder_size"/>
+                            <field name="material_width_separation" readonly="0"/>
                             <field name="amount"/>
                             <field name="linear_meters" readonly="0"/>
                         </group>
