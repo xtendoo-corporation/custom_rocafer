@@ -26,6 +26,11 @@ class PrintingCylinder(models.Model):
         string='Cylinder size'
     )
 
+    @api.depends('name', 'z_impression_cylinder', 'z_magnetic_cut')
+    def _compute_display_name(self):
+        for record in self:
+            record.display_name = f"{record.name} - {record.z_impression_cylinder} - {record.z_magnetic_cut}"
+
 
 class CylinderLine(models.Model):
     _name = "printing.cylinder.line"

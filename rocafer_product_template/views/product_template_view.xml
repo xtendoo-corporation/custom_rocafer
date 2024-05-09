@@ -56,7 +56,7 @@
                     </group>
                     <group string="Printing cylinder">
                         <group>
-                            <field name="printing_cylinder_id"/>
+                            <field name="printing_cylinder_id" />
                         </group>
                         <group>
                             <field name="z_impression_cylinder"/>
