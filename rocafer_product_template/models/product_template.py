@@ -83,6 +83,15 @@ class Product(models.Model):
         string='H1 Value',
         default=lambda self: self.env.company.h1_value,
     )
+
+    @api.onchange('h1_value', 'label_width', 'printing_cylinder_size')
+    def compute_h1_value(self):
+        for record in self:
+            record.h1_value = record.printing_cylinder_size - record.label_width
+            print("*"*80)
+            if record.h1_value < self.env.company.h1_value:
+                record.h1_value = self.env.company.h1_value
+
     h2_value = fields.Float(
         string='H2 Value',
         default=lambda self: self.env.company.h2_value,
@@ -115,7 +124,7 @@ class Product(models.Model):
         for record in self:
             record.advance_label_separation = record.label_width + record.h1_value
 
-    @api.onchange('label_width', 'h1_value')
+    @api.onchange('printing_cylinder_size')
     def _compute_printing_cylinder_id(self):
         for record in self:
             line_id = self.env['printing.cylinder.line'].search(
@@ -129,12 +138,12 @@ class Product(models.Model):
         default=_compute_printing_cylinder_id,
     )
 
-    @api.onchange('label_width', 'h1_value')
+    @api.onchange('label_width')
     def _compute_printing_cylinder_size(self):
         self.printing_cylinder_size = 0
         for record in self:
             line_id = self.env['printing.cylinder.line'].search(
-                [('size', '>=', record.advance_label_separation)], limit=1, order='size asc'
+                [('size', '>=', record.label_width + self.env.company.h1_value)], limit=1, order='size asc'
             )
             if line_id:
                 record.printing_cylinder_size = line_id.size

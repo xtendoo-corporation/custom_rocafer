@@ -22,13 +22,13 @@
         <field name="name">stamping.option.form</field>
         <field name="model">stamping.option</field>
         <field name="arch" type="xml">
-        <form string="Stamping">
-            <sheet>
-                <group >
-                    <field name="name" placeholder="Stamping name"/>
-                </group>
-            </sheet>
-        </form>
+            <form string="Stamping">
+                <sheet>
+                    <group>
+                        <field name="name" placeholder="Stamping name"/>
+                    </group>
+                </sheet>
+            </form>
         </field>
     </record>
 
