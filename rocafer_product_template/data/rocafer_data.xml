@@ -63,6 +63,625 @@
         <record id="release_varnish" model="varnish.type">
             <field name="name">Barniz realease</field>
         </record>
+        <!--    ***********************************************************************************************************    -->
+        <record id="cilynder1" model="printing.cylinder">
+            <field name="name">Omet</field>
+            <field name="z_impression_cylinder">58</field>
+            <field name="z_magnetic_cut">116</field>
+        </record>
 
+        <record id="cilynder1_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">184.15</field>
+        </record>
+
+        <record id="cilynder1_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">92.08</field>
+        </record>
+
+        <record id="cilynder1_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">61.38</field>
+        </record>
+
+        <record id="cilynder1_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">46.04</field>
+        </record>
+
+        <record id="cilynder1_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">36.83</field>
+        </record>
+
+        <record id="cilynder1_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">30.69</field>
+        </record>
+
+        <record id="cilynder1_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">26.31</field>
+        </record>
+
+        <record id="cilynder1_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">23.02</field>
+        </record>
+
+        <record id="cilynder1_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">20.46</field>
+        </record>
+
+        <record id="cilynder1_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder1"/>
+            <field name="size">18.42</field>
+        </record>
+
+        <record id="cilynder2" model="printing.cylinder">
+            <field name="name">Omet</field>
+            <field name="z_impression_cylinder">64</field>
+            <field name="z_magnetic_cut">128</field>
+        </record>
+
+        <record id="cilynder2_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">203.20</field>
+        </record>
+
+        <record id="cilynder2_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">101.60</field>
+        </record>
+
+        <record id="cilynder2_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">67.73</field>
+        </record>
+
+        <record id="cilynder2_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">50.80</field>
+        </record>
+
+        <record id="cilynder2_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">40.64</field>
+        </record>
+
+        <record id="cilynder2_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">33.87</field>
+        </record>
+
+        <record id="cilynder2_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">29.03</field>
+        </record>
+
+        <record id="cilynder2_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">25.40</field>
+        </record>
+
+        <record id="cilynder2_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">22.58</field>
+        </record>
+
+        <record id="cilynder2_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">20.32</field>
+        </record>
+
+        <record id="cilynder2_line11" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">18.47</field>
+        </record>
+
+        <record id="cilynder2_line12" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder2"/>
+            <field name="size">16.93</field>
+        </record>
+
+        <record id="cilynder3" model="printing.cylinder">
+            <field name="name">Omet</field>
+            <field name="z_impression_cylinder">68</field>
+            <field name="z_magnetic_cut">68</field>
+        </record>
+
+        <record id="cilynder3_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">215.90</field>
+        </record>
+
+        <record id="cilynder3_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">107.95</field>
+        </record>
+
+        <record id="cilynder3_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">71.97</field>
+        </record>
+
+        <record id="cilynder3_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">53.98</field>
+        </record>
+
+        <record id="cilynder3_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">43.18</field>
+        </record>
+
+        <record id="cilynder3_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">35.98</field>
+        </record>
+
+        <record id="cilynder3_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">30.84</field>
+        </record>
+
+        <record id="cilynder3_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">26.99</field>
+        </record>
+
+        <record id="cilynder3_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">23.99</field>
+        </record>
+
+        <record id="cilynder3_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">21.59</field>
+        </record>
+
+        <record id="cilynder3_line11" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">19.63</field>
+        </record>
+
+        <record id="cilynder3_line12" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder3"/>
+            <field name="size">17.99</field>
+        </record>
+
+        <record id="cilynder4" model="printing.cylinder">
+            <field name="name">Omet</field>
+            <field name="z_impression_cylinder">70</field>
+            <field name="z_magnetic_cut">70</field>
+        </record>
+
+        <record id="cilynder4_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">222.25</field>
+        </record>
+
+        <record id="cilynder4_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">111.13</field>
+        </record>
+
+        <record id="cilynder4_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">74.08</field>
+        </record>
+
+        <record id="cilynder4_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">55.56</field>
+        </record>
+
+        <record id="cilynder4_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">44.45</field>
+        </record>
+
+        <record id="cilynder4_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">37.04</field>
+        </record>
+
+        <record id="cilynder4_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">31.75</field>
+        </record>
+
+        <record id="cilynder4_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">27.78</field>
+        </record>
+
+        <record id="cilynder4_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">24.69</field>
+        </record>
+
+        <record id="cilynder4_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">22.23</field>
+        </record>
+
+        <record id="cilynder4_line11" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">20.20</field>
+        </record>
+
+        <record id="cilynder4_line12" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder4"/>
+            <field name="size">18.52</field>
+        </record>
+
+        <record id="cilynder5" model="printing.cylinder">
+            <field name="name">Omet</field>
+            <field name="z_impression_cylinder">72</field>
+            <field name="z_magnetic_cut">72</field>
+        </record>
+
+        <record id="cilynder5_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">228.60</field>
+        </record>
+
+        <record id="cilynder5_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">114.30</field>
+        </record>
+
+        <record id="cilynder5_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">76.20</field>
+        </record>
+
+        <record id="cilynder5_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">57.15</field>
+        </record>
+
+        <record id="cilynder5_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">45.72</field>
+        </record>
+
+        <record id="cilynder5_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">38.10</field>
+        </record>
+
+        <record id="cilynder5_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">32.66</field>
+        </record>
+
+        <record id="cilynder5_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">28.58</field>
+        </record>
+
+        <record id="cilynder5_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">25.40</field>
+        </record>
+
+        <record id="cilynder5_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">22.86</field>
+        </record>
+
+        <record id="cilynder5_line11" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">20.78</field>
+        </record>
+
+        <record id="cilynder5_line12" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder5"/>
+            <field name="size">19.05</field>
+        </record>
+
+        <record id="cilynder6" model="printing.cylinder">
+            <field name="name">Omet</field>
+            <field name="z_impression_cylinder">74</field>
+            <field name="z_magnetic_cut">74</field>
+        </record>
+
+        <record id="cilynder6_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">234.95</field>
+        </record>
+
+        <record id="cilynder6_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">117.48</field>
+        </record>
+
+        <record id="cilynder6_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">78.32</field>
+        </record>
+
+        <record id="cilynder6_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">58.74</field>
+        </record>
+
+        <record id="cilynder6_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">46.99</field>
+        </record>
+
+        <record id="cilynder6_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">39.16</field>
+        </record>
+
+        <record id="cilynder6_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">33.56</field>
+        </record>
+
+        <record id="cilynder6_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">29.37</field>
+        </record>
+
+        <record id="cilynder6_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">26.11</field>
+        </record>
+
+        <record id="cilynder6_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">23.50</field>
+        </record>
+
+        <record id="cilynder6_line11" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">21.36</field>
+        </record>
+
+        <record id="cilynder6_line12" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder6"/>
+            <field name="size">19.58</field>
+        </record>
+
+        <record id="cilynder7" model="printing.cylinder">
+            <field name="name">Omet</field>
+            <field name="z_impression_cylinder">76</field>
+            <field name="z_magnetic_cut">76</field>
+        </record>
+
+        <record id="cilynder7_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">241.30</field>
+        </record>
+
+        <record id="cilynder7_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">120.65</field>
+        </record>
+
+        <record id="cilynder7_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">80.43</field>
+        </record>
+
+        <record id="cilynder7_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">60.33</field>
+        </record>
+
+        <record id="cilynder7_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">48.26</field>
+        </record>
+
+        <record id="cilynder7_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">40.22</field>
+        </record>
+
+        <record id="cilynder7_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">34.47</field>
+        </record>
+
+        <record id="cilynder7_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">30.16</field>
+        </record>
+
+        <record id="cilynder7_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">26.81</field>
+        </record>
+
+        <record id="cilynder7_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder7"/>
+            <field name="size">24.13</field>
+        </record>
+
+        <record id="cilynder8" model="printing.cylinder">
+            <field name="name">Omet</field>
+            <field name="z_impression_cylinder">78</field>
+            <field name="z_magnetic_cut">78</field>
+        </record>
+
+        <record id="cilynder8_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">247.65</field>
+        </record>
+
+        <record id="cilynder8_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">123.83</field>
+        </record>
+
+        <record id="cilynder8_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">82.55</field>
+        </record>
+
+        <record id="cilynder8_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">61.91</field>
+        </record>
+
+        <record id="cilynder8_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">49.53</field>
+        </record>
+
+        <record id="cilynder8_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">41.28</field>
+        </record>
+
+        <record id="cilynder8_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">35.38</field>
+        </record>
+
+        <record id="cilynder8_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">30.96</field>
+        </record>
+
+        <record id="cilynder8_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">27.52</field>
+        </record>
+
+        <record id="cilynder8_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder8"/>
+            <field name="size">24.77</field>
+        </record>
+
+        <record id="cilynder9" model="printing.cylinder">
+            <field name="name">Omet/Lombardi</field>
+            <field name="z_impression_cylinder">80</field>
+            <field name="z_magnetic_cut">80</field>
+        </record>
+
+        <record id="cilynder9_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">254.00</field>
+        </record>
+
+        <record id="cilynder9_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">127.00</field>
+        </record>
+
+        <record id="cilynder9_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">84.67</field>
+        </record>
+
+        <record id="cilynder9_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">63.50</field>
+        </record>
+
+        <record id="cilynder9_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">50.80</field>
+        </record>
+
+        <record id="cilynder9_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">42.33</field>
+        </record>
+
+        <record id="cilynder9_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">36.29</field>
+        </record>
+
+        <record id="cilynder9_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">31.75</field>
+        </record>
+
+        <record id="cilynder9_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">28.22</field>
+        </record>
+
+        <record id="cilynder9_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder9"/>
+            <field name="size">25.40</field>
+        </record>
+
+        <record id="cilynder10" model="printing.cylinder">
+            <field name="name">Omet/Lombardi</field>
+            <field name="z_impression_cylinder">82</field>
+            <field name="z_magnetic_cut">82</field>
+        </record>
+
+        <record id="cilynder10_line1" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">260.35</field>
+        </record>
+
+        <record id="cilynder10_line2" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">130.18</field>
+        </record>
+
+        <record id="cilynder10_line3" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">86.78</field>
+        </record>
+
+        <record id="cilynder10_line4" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">65.09</field>
+        </record>
+
+        <record id="cilynder10_line5" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">52.07</field>
+        </record>
+
+        <record id="cilynder10_line6" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">43.39</field>
+        </record>
+
+        <record id="cilynder10_line7" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">37.19</field>
+        </record>
+
+        <record id="cilynder10_line8" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">32.54</field>
+        </record>
+
+        <record id="cilynder10_line9" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">28.93</field>
+        </record>
+
+        <record id="cilynder10_line10" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">26.04</field>
+        </record>
+
+        <record id="cilynder10_line11" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">23.67</field>
+        </record>
+
+        <record id="cilynder10_line12" model="printing.cylinder.line">
+            <field name="printing_cylinder_id" ref="cilynder10"/>
+            <field name="size">21.70</field>
+        </record>
     </data>
 </odoo>

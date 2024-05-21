@@ -44,6 +44,7 @@
                         <group>
                             <field name="label_width"/>
                             <field name="label_height"/>
+                            <field name="v_value"/>
                             <field name="h1_value"/>
                             <field name="h2_value"/>
                         </group>

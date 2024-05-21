@@ -84,34 +84,44 @@ class Product(models.Model):
         default=lambda self: self.env.company.h1_value,
     )
 
-    @api.onchange('h1_value', 'label_width', 'printing_cylinder_size')
-    def compute_h1_value(self):
-        for record in self:
-            record.h1_value = record.printing_cylinder_size - record.label_width
-            print("*"*80)
-            if record.h1_value < self.env.company.h1_value:
-                record.h1_value = self.env.company.h1_value
+    # @api.onchange('h1_value', 'label_width', 'printing_cylinder_size')
+    # def compute_h1_value(self):
+    #     for record in self:
+    #         record.h1_value = record.printing_cylinder_size - record.label_width
+    #         print("*"*80)
+    #         if record.h1_value < self.env.company.h1_value:
+    #             record.h1_value = self.env.company.h1_value
 
     h2_value = fields.Float(
         string='H2 Value',
         default=lambda self: self.env.company.h2_value,
     )
 
+    # Nuevo campo
+    v_value = fields.Float(
+        string='V Value',
+    )
+
+    @api.onchange('label_height', 'printing_cylinder_size')
+    def compute_v_value(self):
+        for record in self:
+            record.v_value = record.printing_cylinder_size - record.label_width
+
     amount = fields.Integer(
         string='Amount',
     )
 
-    linear_meters = fields.Integer(
+    linear_meters = fields.Float(
         string='Linear meters',
         compute='_compute_meters',
         store=True
     )
 
-    @api.depends('amount', 'assembly_figure_x')
+    @api.depends('amount', 'assembly_figure_x', 'printing_cylinder_size')
     def _compute_meters(self):
         self.linear_meters = 0
         for record in self.filtered(lambda r: r.assembly_figure_x):
-            record.linear_meters = record.amount / record.assembly_figure_x
+            record.linear_meters = record.amount / 1000 * record.printing_cylinder_size
 
     advance_label_separation = fields.Float(
         string='Advance label separation',
@@ -136,9 +146,10 @@ class Product(models.Model):
         comodel_name="printing.cylinder",
         string="Machine",
         default=_compute_printing_cylinder_id,
+        store=True,
     )
 
-    @api.onchange('label_width')
+    @api.depends('label_width')
     def _compute_printing_cylinder_size(self):
         self.printing_cylinder_size = 0
         for record in self:
@@ -183,7 +194,11 @@ class Product(models.Model):
     @api.depends('label_height', 'assembly_figure_x', 'h1_value', 'h2_value')
     def _calculate_material_width_separation(self):
         for record in self:
-            record.material_width_separation = record.label_height * record.assembly_figure_x + record.h1_value + record.h2_value
+            record.material_width_separation = (
+                record.label_height * record.assembly_figure_x +
+                record.h1_value * (record.assembly_figure_x-1) +
+                record.h2_value
+            )
 
     product_material = fields.Many2one(
         comodel_name='material.type',

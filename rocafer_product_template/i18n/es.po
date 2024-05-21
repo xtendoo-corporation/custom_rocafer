@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-06 09:30+0000\n"
-"PO-Revision-Date: 2024-05-06 09:30+0000\n"
+"POT-Creation-Date: 2024-05-21 07:47+0000\n"
+"PO-Revision-Date: 2024-05-21 07:47+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -328,7 +328,7 @@ msgstr "Material"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__material_width_separation
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__material_width_separation
 msgid "Material width separation"
-msgstr "Separación ancho de material"
+msgstr "Ancho de material"
 
 #. module: rocafer_product_template
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
@@ -516,6 +516,12 @@ msgid "Troquel number"
 msgstr "Número de Troquel"
 
 #. module: rocafer_product_template
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__v_value
+#: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__v_value
+msgid "V Value"
+msgstr "V valor"
+
+#. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder_line__size
 msgid "Value"
 msgstr "Valor"
@@ -543,20 +549,20 @@ msgstr "Barniz"
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__assembly_figure_x
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__assembly_figure_x
 msgid "X width"
-msgstr "X Ancho"
+msgstr "X"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__assembly_figure_y
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__assembly_figure_y
 msgid "Y height"
-msgstr "Y Alto"
+msgstr "Y"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__z_impression_cylinder
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_product__z_impression_cylinder
 #: model:ir.model.fields,field_description:rocafer_product_template.field_product_template__z_impression_cylinder
 msgid "Z Impression cylinder"
-msgstr "Z Cilindro impresión"
+msgstr "Z Cilindro imrpesión"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_printing_cylinder__z_magnetic_cut
