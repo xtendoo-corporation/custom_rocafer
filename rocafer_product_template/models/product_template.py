@@ -100,10 +100,11 @@ class Product(models.Model):
     # Nuevo campo
     v_value = fields.Float(
         string='V Value',
+        compute='_compute_v_value',
     )
 
-    @api.onchange('label_height', 'printing_cylinder_size')
-    def compute_v_value(self):
+    @api.depends('label_height', 'printing_cylinder_size')
+    def _compute_v_value(self):
         for record in self:
             record.v_value = record.printing_cylinder_size - record.label_width
 

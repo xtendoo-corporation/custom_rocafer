@@ -17,27 +17,29 @@ class TestProduct(TransactionCase):
             'assembly_figure_x': 2,
             'assembly_figure_y': 4,
             #PRODUCCION - Corregir traduccion
-
+            'label_width': 180,
+            'label_height': 60,
+            'amount': 5000,
         })
 
-    #buscar odoo selenium test(similar)
-    #odoo tools
+    def test_troquel_figure(self):
+        self.assertEqual(self.product.troquel_figure, 8, 'Troquel figure calculation is incorrect')
 
-    def test_product_creation(self):
-        self.assertEqual(self.product.name, 'Test Product', 'Product name is incorrect')
+    def test_label_width(self):
+        self.assertEqual(self.product.label_width, 180, 'Label width calculation is incorrect')
 
-    def test_troquel_figure_calculation(self):
-        self.assertEqual(self.product.troquel_figure, 7, 'Troquel figure calculation is incorrect')
+    def test_printing_cylinder_size(self):
+        self.assertEqual(self.product.printing_cylinder_size, 184.15, 'Printing cylinder size calculation is incorrect')
 
-    def test_printing_cylinder_size_calculation(self):
-        self.product.label_width = 112
-        self.product.h1_value = 100
-        self.product._compute_printing_cylinder_size()
-        self.assertEqual(self.product.printing_cylinder_size, 117.48, 'Printing cylinder size calculation is incorrect')
+    def test_v_value(self):
+        self.assertAlmostEqual(self.product.v_value, 4.15, places=2, msg='V value calculation is incorrect')
 
     def test_material_width_separation(self):
-        self.product.printing_cylinder_size = 84.67
-        self.product.assembly_figure_x = 4
-        self.product.amount = 5000
-        self.product._compute_meters()
-        self.assertEqual(self.product.linear_meters, 423.35, 'Linear meters calculation is incorrect')
+        self.assertEqual(self.product.material_width_separation, 138, 'Material width separation calculation is incorrect')
+
+    def test_h1_value(self):
+        self.assertEqual(self.product.h1_value, 3, 'H1 value calculation is incorrect')
+
+    def test_h2_value(self):
+        self.assertEqual(self.product.h2_value, 15, 'H2 value calculation is incorrect')
+
