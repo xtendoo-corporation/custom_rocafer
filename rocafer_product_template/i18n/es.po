@@ -443,7 +443,7 @@ msgstr "Material del producto"
 #. module: rocafer_product_template
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template.rocafer_product_template_view
 msgid "Production"
-msgstr "Producion"
+msgstr "Producción"
 
 #. module: rocafer_product_template
 #: model:ir.model.fields,field_description:rocafer_product_template.field_print_orientation__product_template_ids

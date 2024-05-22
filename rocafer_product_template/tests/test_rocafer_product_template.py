@@ -43,3 +43,6 @@ class TestProduct(TransactionCase):
     def test_h2_value(self):
         self.assertEqual(self.product.h2_value, 15, 'H2 value calculation is incorrect')
 
+    def test_linear_meters(self):
+        self.assertEqual(self.product.linear_meters, 920.75, 'Linear meters calculation is incorrect')
+
