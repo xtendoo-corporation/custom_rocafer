@@ -122,7 +122,7 @@ class Product(models.Model):
     def _compute_meters(self):
         self.linear_meters = 0
         for record in self.filtered(lambda r: r.assembly_figure_x):
-            record.linear_meters = record.amount / 1000 * record.printing_cylinder_size
+            record.linear_meters = (record.amount / 1000 * record.printing_cylinder_size) / record.assembly_figure_x
 
     advance_label_separation = fields.Float(
         string='Advance label separation',
