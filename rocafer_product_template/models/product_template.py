@@ -206,6 +206,10 @@ class Product(models.Model):
         string='Product material',
     )
 
+    tolerance = fields.Float(
+        string='Tolerance',
+    )
+
     # color_number = fields.Integer(
     #     string='Color numbers'
     # )
