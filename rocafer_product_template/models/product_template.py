@@ -118,11 +118,7 @@ class Product(models.Model):
         store=True
     )
 
-    @api.depends('amount', 'assembly_figure_x', 'printing_cylinder_size')
-    def _compute_meters(self):
-        self.linear_meters = 0
-        for record in self.filtered(lambda r: r.assembly_figure_x):
-            record.linear_meters = (record.amount / 1000 * record.printing_cylinder_size) / record.assembly_figure_x
+
 
     advance_label_separation = fields.Float(
         string='Advance label separation',
@@ -207,8 +203,18 @@ class Product(models.Model):
     )
 
     tolerance = fields.Float(
-        string='Tolerance',
+        string='Tolerancia en %',
     )
+
+    @api.depends('assembly_figure_x', 'printing_cylinder_size', 'tolerance', 'amount')
+    def _compute_meters(self):
+        self.linear_meters = 0
+        for record in self.filtered(lambda r: r.assembly_figure_x):
+            if (record.tolerance == 0):
+                record.linear_meters = (record.amount / 1000 * record.printing_cylinder_size) / record.assembly_figure_x
+            else:
+                record.linear_meters = (record.amount / 1000 * record.printing_cylinder_size) / record.assembly_figure_x * (1 + record.tolerance / 100)
+
 
     # color_number = fields.Integer(
     #     string='Color numbers'
