@@ -7,7 +7,7 @@
                     <div class="page">
                         <h1 style="text-align:center">ROCAFER / ORDEN DE TRABAJO</h1>
                         <div name="content_product">
-                        <div class="row">
+                        <div class="row" style="margin: 4px">
                             <div class="col-2">
                                 <p style="margin-bottom:0px">
                                     <b>Troquel nº</b>
@@ -42,8 +42,8 @@
                                 </group>
                             </div>
                         </div>
-                        <hr/>
-                        <div class="row">
+                        <hr style="border-top: 1px solid black; margin: 6px;"/>
+                        <div class="row" style="margin: 4px">
                             <div class="col-3">
                                 <p style="margin-bottom:0px">
                                     <b>Cantidad</b>
@@ -72,8 +72,8 @@
                                 </t>
                             </div>
                         </div>
-                        <hr/>
-                        <div class="row">
+                        <hr style="border-top: 1px solid black; margin: 6px;"/>
+                        <div class="row" style="margin: 4px">
                              <div class="col-2">
                                 <p style="margin-bottom:0px">
                                     <b>Cantidad etiq.salida</b>
@@ -112,8 +112,8 @@
                                  </t>
                             </div>
                         </div>
-                         <hr/>
-                        <div class="row">
+                         <hr style="border-top: 1px solid black; margin: 6px;"/>
+                        <div class="row" style="margin: 4px">
                             <div class="col-2">
                                 <p style="margin-bottom:0px">
                                     <b>Barniz</b>
@@ -157,8 +157,8 @@
                                 <span t-field="o.laminated"/>
                             </div>
                         </div>
-                        <hr/>
-                        <div class="row">
+                        <hr style="border-top: 1px solid black; margin: 6px;"/>
+                        <div class="row" style="margin: 4px">
                             <div class="col-6">
                                 <p style="margin-bottom:0px">
                                     <b>Metros lineales</b>
@@ -172,7 +172,7 @@
                                 <span t-field="o.tolerance"/>
                             </div>
                         </div>
-                        <hr/>
+                        <hr style="border-top: 1px solid black; margin: 6px;"/>
                     </div>
                     </div>
                 </t>

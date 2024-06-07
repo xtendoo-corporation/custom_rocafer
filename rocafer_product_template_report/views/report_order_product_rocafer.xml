@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="report_order_product_rocafer">
-         <t t-set="o" t-value="current_line"/>
-        <div class="row" style="margin-bottom:5px">
+        <t t-set="o" t-value="product"/>
+        <div class="row" style="margin-bottom:0px">
             <div class="col-6">
                 <p style="margin-bottom:0px">
                     <b>Cliente</b>
@@ -13,46 +13,11 @@
                 <p style="margin-bottom:0px">
                     <b>Código etiqueta</b>
                 </p>
-                <span>
                     <span t-field="o.label_code"/>
-                </span>
             </div>
         </div>
-        <hr/>
-        <div class="row">
-            <div class="col-2">
-                <p style="margin-bottom:0px">
-                    <b>Fecha pedido</b>
-                </p>
-
-            </div>
-            <div class="col-2">
-                <p style="margin-bottom:0px">
-                    <b>Registrado por</b>
-                </p>
-
-            </div>
-            <div class="col-2">
-                <p style="margin-bottom:0px">
-                    <b>Nº orden</b>
-                </p>
-
-            </div>
-            <div class="col-3">
-                <p style="margin-bottom:0px">
-                    <b>Nº cliente</b>
-                </p>
-
-            </div>
-            <div class="col-3">
-                <p style="margin-bottom:0px">
-                    <b>Nº de pedido cliente</b>
-                </p>
-
-            </div>
-        </div>
-        <hr/>
-        <div class="row">
+        <hr style="border-top: 1px solid black; margin: 6px;"/>
+        <div class="row" style="margin: 4px">
             <div class="col-2">
                 <p style="margin-bottom:0px">
                     <b>Troquel nº</b>
@@ -69,7 +34,6 @@
                 <p style="margin-bottom:0px">
                     <b>Z. IMP./COR.</b>
                 </p>
-
             </div>
             <div class="col-3">
                 <p style="margin-bottom:0px">
@@ -87,20 +51,15 @@
                 </group>
             </div>
         </div>
-        <hr/>
-        <div class="row">
-            <div class="col-2">
-                <p style="margin-bottom:0px">
-                    <b>Fecha entrega</b>
-                </p>
-            </div>
-            <div class="col-2">
+        <hr style="border-top: 1px solid black; margin: 6px;"/>
+        <div class="row" style="margin: 4px">
+            <div class="col-3">
                 <p style="margin-bottom:0px">
                     <b>Cantidad</b>
                 </p>
                 <span t-field="o.amount"/>
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 <p style="margin-bottom:0px">
                     <b>Medidas</b>
                 </p>
@@ -124,8 +83,8 @@
                 </t>
             </div>
         </div>
-        <hr/>
-        <div class="row">
+        <hr style="border-top: 1px solid black; margin: 6px;"/>
+        <div class="row" style="margin: 4px">
             <div class="col-2">
                 <p style="margin-bottom:0px">
                     <b>Cantidad etiq.salida</b>
@@ -164,8 +123,8 @@
                 </t>
             </div>
         </div>
-        <hr/>
-        <div class="row">
+        <hr style="border-top: 1px solid black; margin: 6px;"/>
+        <div class="row" style="margin: 4px">
             <div class="col-2">
                 <p style="margin-bottom:0px">
                     <b>Barniz</b>
@@ -209,8 +168,8 @@
                 <span t-field="o.laminated"/>
             </div>
         </div>
-        <hr/>
-        <div class="row">
+        <hr style="border-top: 1px solid black; margin: 6px;"/>
+        <div class="row" style="margin: 4px">
             <div class="col-6">
                 <p style="margin-bottom:0px">
                     <b>Metros lineales</b>
@@ -224,6 +183,6 @@
                 <span t-field="o.tolerance"/>
             </div>
         </div>
-        <hr/>
+        <hr style="border-top: 1px solid black; margin: 6px;"/>
     </template>
 </odoo>
