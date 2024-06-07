@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="report_product_rocafer">
+    <template id="report_order_product_rocafer">
         <t t-call="web.html_container">
-            <t t-call="web.external_layout">
-                <t t-foreach="docs" t-as="o">
-                    <div class="page">
-                        <h1 style="text-align:center">ROCAFER / ORDEN DE TRABAJO</h1>
-                        <div name="content_product">
+                        <div class="row" style="margin-bottom:5px">
+                            <div class="col-6">
+                                <p style="margin-bottom:0px">
+                                    <b>Cliente</b>
+                                </p>
+                                <span t-field="o.res_partner_id"/>
+                            </div>
+                            <div class="col-6">
+                                <p style="margin-bottom:0px">
+                                    <b>Código etiqueta</b>
+                                </p>
+                                <span>
+                                    <span t-field="o.label_code"/>
+                                </span>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-2">
+                                <p style="margin-bottom:0px">
+                                    <b>Fecha pedido</b>
+                                </p>
+
+                            </div>
+                            <div class="col-2">
+                                <p style="margin-bottom:0px">
+                                    <b>Registrado por</b>
+                                </p>
+
+                            </div>
+                            <div class="col-2">
+                                <p style="margin-bottom:0px">
+                                    <b>Nº orden</b>
+                                </p>
+
+                            </div>
+                            <div class="col-3">
+                                <p style="margin-bottom:0px">
+                                    <b>Nº cliente</b>
+                                </p>
+
+                            </div>
+                            <div class="col-3">
+                                <p style="margin-bottom:0px">
+                                    <b>Nº de pedido cliente</b>
+                                </p>
+
+                            </div>
+                        </div>
+                        <hr/>
                         <div class="row">
                             <div class="col-2">
                                 <p style="margin-bottom:0px">
@@ -44,13 +89,18 @@
                         </div>
                         <hr/>
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-2">
+                                <p style="margin-bottom:0px">
+                                    <b>Fecha entrega</b>
+                                </p>
+                            </div>
+                            <div class="col-2">
                                 <p style="margin-bottom:0px">
                                     <b>Cantidad</b>
                                 </p>
                                  <span t-field="o.amount"/>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <p style="margin-bottom:0px">
                                     <b>Medidas</b>
                                 </p>
@@ -173,10 +223,6 @@
                             </div>
                         </div>
                         <hr/>
-                    </div>
-                    </div>
-                </t>
-            </t>
         </t>
     </template>
 </odoo>
