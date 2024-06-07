@@ -7,13 +7,16 @@
     "license": "LGPL-3",
     "application": True,
     "depends": [
+        'web',
         'product',
+        'sale',
         'rocafer_product_template',
     ],
     "data": [
         "views/report_order_product_rocafer.xml",
         "views/report_product_rocafer.xml",
         "reports/rocafer_report.xml",
+        "views/sale_order_rocafer.xml",
     ],
     "installable": True,
 }
