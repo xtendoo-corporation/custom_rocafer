@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-09 09:39+0000\n"
-"PO-Revision-Date: 2024-05-09 09:39+0000\n"
+"POT-Creation-Date: 2024-06-07 12:14+0000\n"
+"PO-Revision-Date: 2024-06-07 12:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,153 +16,196 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: rocafer_product_template_report
-#: model:ir.actions.report,print_report_name:rocafer_product_template_report.report_product_template_rocafer
+#: model:ir.actions.report,print_report_name:rocafer_product_template_report.report_order_product_template_rocafer
 msgid "'Rocafer order - %s' % (object.name)"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model:ir.actions.report,print_report_name:rocafer_product_template_report.report_product_template_rocafer
+msgid "'Rocafer product - %s' % (object.name)"
+msgstr ""
+
+#. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Barniz</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Cantidad etiq.salida</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Cantidad</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 msgid "<b>Cliente</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Colores</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 msgid "<b>Código etiqueta</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Estampación</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.sale_order_rocafer
 msgid "<b>Fecha entrega</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.sale_order_rocafer
 msgid "<b>Fecha pedido</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Figuras montaje</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Figuras tq</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Maq etiquetas</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Material</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Medidas</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
+msgid "<b>Metros lineales</b>"
+msgstr ""
+
+#. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.sale_order_rocafer
 msgid "<b>Nº cliente</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.sale_order_rocafer
 msgid "<b>Nº de pedido cliente</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.sale_order_rocafer
 msgid "<b>Nº orden</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Orientación</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Plastificado</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
-#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.sale_order_rocafer
 msgid "<b>Registrado por</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Relieve</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Serigrafía</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
+msgid "<b>Tolerancia</b>"
+msgstr ""
+
+#. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Troquel nº</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Z. IMP./COR.</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Ø Exterior del rollo</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<b>Ø Interior del rollo</b>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<span>No</span>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<span>Si</span>"
 msgstr ""
 
 #. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_order_product_rocafer
 #: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.report_product_rocafer
 msgid "<span>X</span>"
+msgstr ""
+
+#. module: rocafer_product_template_report
+#: model_terms:ir.ui.view,arch_db:rocafer_product_template_report.sale_order_rocafer
+msgid "ORDEN DE TRABAJO"
 msgstr ""
 
 #. module: rocafer_product_template_report
@@ -171,6 +214,11 @@ msgid "ROCAFER / ORDEN DE TRABAJO"
 msgstr ""
 
 #. module: rocafer_product_template_report
-#: model:ir.actions.report,name:rocafer_product_template_report.report_product_template_rocafer
+#: model:ir.actions.report,name:rocafer_product_template_report.report_order_product_template_rocafer
 msgid "Rocafer order print"
+msgstr ""
+
+#. module: rocafer_product_template_report
+#: model:ir.actions.report,name:rocafer_product_template_report.report_product_template_rocafer
+msgid "Rocafer product print"
 msgstr "Imprimir orden de trabajo Rocafer"

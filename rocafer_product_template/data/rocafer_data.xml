@@ -47,7 +47,6 @@
             <field name="image" type="base64"
                    file="rocafer_product_template/static/img/indifferent.png"/>
         </record>
-
         <record id="shine" model="varnish.type">
             <field name="name">Brillo</field>
         </record>

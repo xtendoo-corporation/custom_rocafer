@@ -9,8 +9,6 @@
                     <!-- Is there a discount on at least one line? -->
                     <t t-set="lines_to_report" t-value="doc._get_order_lines_to_report()"/>
                     <t t-set="display_discount" t-value="any(l.discount for l in lines_to_report)"/>
-
-                    <t t-set="lines_to_report" t-value="doc._get_order_lines_to_report()"/>
                     <t t-foreach="lines_to_report" t-as="current_line">
                         <t t-set="product" t-value="current_line.product_id.product_tmpl_id"/>
                         <div style="page-break-after: always;">
@@ -57,7 +55,7 @@
                                 </div>
                             </div>
                             <hr style="border-top: 1px solid black; margin: 6px;"/>
-                            <t t-call="rocafer_product_template_report.report_order_product_rocafer"/>
+                            <t t-call="rocafer_product_template_report.report_product_rocafer"/>
                         </div>
                     </t>
                 </t>

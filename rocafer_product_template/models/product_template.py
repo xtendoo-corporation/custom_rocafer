@@ -40,8 +40,16 @@ class Product(models.Model):
     #     string='Number order'
     # )
 
-    troquel_number = fields.Char(
+    troquel_number_1 = fields.Char(
         string='Troquel number'
+    )
+
+    troquel_number_2 = fields.Char(
+        string='Troquel number'
+    )
+
+    troquel_figure_2 = fields.Integer(
+        string="Figures",
     )
 
     assembly_figure_x = fields.Integer(
@@ -284,12 +292,27 @@ class Product(models.Model):
         string='Reviewers/Expedition'
     )
 
-    regulatory_council_numbering = fields.Char(
-        string='Regulatory council numbering'
-    )
-
     color_ink_ids = fields.One2many(
         comodel_name='color.ink',
         inverse_name='product_template_id',
         string='Colors ink'
+    )
+
+    ink_count = fields.Integer(
+        string='Number of Inks',
+        compute='_compute_ink_count',
+        store=True,
+    )
+
+    engravings_number = fields.Integer(
+        string='Número de grabados'
+    )
+
+    @api.depends('color_ink_ids')
+    def _compute_ink_count(self):
+        for record in self:
+            record.ink_count = len(record.color_ink_ids)
+
+    regulatory_council_numbering = fields.Boolean(
+        string='Regulatory council numbering'
     )

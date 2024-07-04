@@ -6,3 +6,4 @@ rocafer_product_template.access_material_type,access_material_type,rocafer_produ
 rocafer_product_template.access_color_ink,access_color_ink,rocafer_product_template.model_color_ink,base.group_user,1,1,1,1
 rocafer_product_template.access_printing_cylinder,access_printing_cylinder,rocafer_product_template.model_printing_cylinder,base.group_user,1,1,1,1
 rocafer_product_template.access_printing_cylinder_line,access_printing_cylinder_line,rocafer_product_template.model_printing_cylinder_line,base.group_user,1,1,1,1
+
