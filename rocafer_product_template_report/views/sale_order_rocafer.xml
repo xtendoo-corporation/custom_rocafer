@@ -17,19 +17,19 @@
                                     <p style="margin-bottom:0px">
                                         <b>Fecha pedido</b>
                                     </p>
-                                    <span t-field="doc.date_order"/>
-                                </div>
-                                <div class="col">
-                                    <p style="margin-bottom:0px">
-                                        <b>Nº orden</b>
-                                    </p>
-                                    <span t-field="doc.name"/>
+                                    <span t-field="doc.date_order" t-options='{"widget": "date"}'/>
                                 </div>
                                 <div class="col">
                                     <p style="margin-bottom:0px">
                                         <b>Nº de pedido cliente</b>
                                     </p>
                                     <span t-field="doc.client_order_ref"/>
+                                </div>
+                                <div class="col">
+                                    <p style="margin-bottom:0px">
+                                        <b>Nº orden</b>
+                                    </p>
+                                    <span t-field="doc.name"/>
                                 </div>
                                 <div class="col">
                                     <p style="margin-bottom:0px">
@@ -41,10 +41,9 @@
                                     <p style="margin-bottom:0px">
                                         <b>Fecha entrega</b>
                                     </p>
-                                    <span t-field="doc.commitment_date"/>
+                                    <span t-field="doc.commitment_date" t-options='{"widget": "date"}'/>
                                 </div>
                             </div>
-                            <hr style="border-top: 1px solid black; margin: 6px;"/>
                             <hr style="border-top: 1px solid black; margin: 6px;"/>
                             <t t-call="rocafer_product_template_report.report_order_product_rocafer"/>
                         </div>

@@ -69,6 +69,7 @@
                             <field name="amount_label_exit"/>
                             <field name="inner_diameter_roll"/>
                             <field name="outer_diameter_roll"/>
+                            <field name="quantity_label_roll"/>
                             <field name="ink_count"/>
                             <field name="color_ink_ids" widget="one2many_list" mode="tree">
                                 <tree options="{'no_create': True}">

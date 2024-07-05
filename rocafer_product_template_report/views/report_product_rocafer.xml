@@ -94,10 +94,11 @@
                                         <b>Colores</b>
                                     </p>
                                     <t t-foreach="o.color_ink_ids" t-as="color">
-                                        <span t-field="color.name" style="margin-right: 8px"/>
+                                        <span t-field="color.name"/>
+                                        <span style="margin-right: 8px">,</span>
                                     </t>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-3" style="margin-left: 40px">
                                     <p style="margin-bottom:0px">
                                         <b>Nº Grabados</b>
                                     </p>
@@ -208,6 +209,7 @@
                                     <p style="margin-bottom:0px">
                                         <b>Cantidad etiq. rollo</b>
                                     </p>
+                                    <span t-field="o.quantity_label_roll"/>
                                 </div>
                                 <div class="col">
                                     <p style="margin-bottom:0px">

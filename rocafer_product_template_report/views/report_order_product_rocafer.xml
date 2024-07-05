@@ -19,7 +19,7 @@
                 <p style="margin-bottom:0px">
                     <b>Descripción etiqueta</b>
                 </p>
-<!--                <span t-field="doc.label_code"/>-->
+                <span t-field="o.name"/>
             </div>
         </div>
         <hr style="border-top: 1px solid black; margin: 6px;"/>
@@ -111,17 +111,17 @@
                     <b>Colores</b>
                 </p>
                 <t t-foreach="o.color_ink_ids" t-as="color">
-                    <span t-field="color.name" style="margin-right: 8px"/>
+                    <span t-field="color.name"/>
+                    <span style="margin-right: 8px">,</span>
                 </t>
             </div>
-            <div class="col-3">
+            <div class="col-3" style="margin-left: 40px">
                 <p style="margin-bottom:0px">
                     <b>Nº Grabados</b>
                 </p>
                 <span t-field="o.engravings_number"/>
             </div>
         </div>
-
         <div class="row" style="margin: 4px">
             <div class="col">
                 <p style="margin-bottom:0px">
@@ -225,12 +225,12 @@
                 <p style="margin-bottom:0px">
                     <b>Cantidad etiq. rollo</b>
                 </p>
+                <span t-field="o.quantity_label_roll"/>
             </div>
             <div class="col">
                 <p style="margin-bottom:0px">
                     <b>Orientación</b>
                 </p>
-                <!--                                 <field name="logo" widget="image" options="{'size': [0, 50]}"/>-->
                 <t t-if="o.print_orientation_id">
                     <span t-if="o.image_orientation">
                         <field name="o.image_orientation">

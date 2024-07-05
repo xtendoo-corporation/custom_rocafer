@@ -41,15 +41,15 @@ class Product(models.Model):
     # )
 
     troquel_number_1 = fields.Char(
-        string='Troquel number'
+        string='Troquel numero'
     )
 
     troquel_number_2 = fields.Char(
-        string='Troquel number'
+        string='Troquel numero'
     )
 
     troquel_figure_2 = fields.Integer(
-        string="Figures",
+        string="Figuras",
     )
 
     assembly_figure_x = fields.Integer(
@@ -299,13 +299,17 @@ class Product(models.Model):
     )
 
     ink_count = fields.Integer(
-        string='Number of Inks',
+        string='Numero de colores',
         compute='_compute_ink_count',
         store=True,
     )
 
     engravings_number = fields.Integer(
         string='Número de grabados'
+    )
+
+    quantity_label_roll = fields.Integer(
+        string='Canditad de etiquetas por rollo'
     )
 
     @api.depends('color_ink_ids')
