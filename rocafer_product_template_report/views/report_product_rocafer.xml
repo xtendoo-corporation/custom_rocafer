@@ -33,7 +33,9 @@
                                     <p style="margin-bottom:0px">
                                         <b>Z. IMP./COR.</b>
                                     </p>
-
+                                    <span t-field="o.printing_cylinders"/>
+                                    <span>/</span>
+                                    <span t-field="o.cut_cylinders"/>
                                 </div>
                                 <div class="col">
                                     <p style="margin-bottom:0px">
@@ -42,9 +44,7 @@
                                     <group>
                                         <p style="margin-bottom:0px">
                                             X:
-                                            <span t-field="o.assembly_figure_x"/>
-                                        </p>
-                                        <p style="margin-bottom:0px">
+                                            <span t-field="o.assembly_figure_x" style="margin-right: 4px"/>
                                             Y:
                                             <span t-field="o.assembly_figure_y"/>
                                         </p>

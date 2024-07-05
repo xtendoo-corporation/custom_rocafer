@@ -5,57 +5,48 @@
             <t t-call="web.external_layout">
                 <t t-set="docs" t-value="docs.with_context(proforma=True)"/>
                 <t t-foreach="docs" t-as="doc">
-
-                    <!-- Is there a discount on at least one line? -->
                     <t t-set="lines_to_report" t-value="doc._get_order_lines_to_report()"/>
                     <t t-set="display_discount" t-value="any(l.discount for l in lines_to_report)"/>
                     <t t-foreach="lines_to_report" t-as="current_line">
                         <t t-set="product" t-value="current_line.product_id.product_tmpl_id"/>
                         <div style="page-break-after: always;">
                             <h1 style="text-align: center">ORDEN DE TRABAJO</h1>
-                            <div class="row" style="margin: 4px">
-                                <div class="col-4">
+                            <!--FILA FECHA PEDIDO-->
+                            <div class="row row-cols-5" style="margin: 4px">
+                                <div class="col">
                                     <p style="margin-bottom:0px">
                                         <b>Fecha pedido</b>
                                     </p>
                                     <span t-field="doc.date_order"/>
                                 </div>
-                                <div class="col-4">
-                                    <p style="margin-bottom:0px">
-                                        <b>Registrado por</b>
-                                    </p>
-                                    <span t-field="doc.user_id"/>
-                                </div>
-                                <div class="col-4">
+                                <div class="col">
                                     <p style="margin-bottom:0px">
                                         <b>Nº orden</b>
                                     </p>
                                     <span t-field="doc.name"/>
                                 </div>
-                            </div>
-                            <hr style="border-top: 1px solid black; margin: 6px;"/>
-                            <div class="row" style="margin: 4px">
-                                <div class="col-4">
-                                    <p style="margin-bottom:0px">
-                                        <b>Fecha entrega</b>
-                                    </p>
-                                    <span t-field="doc.commitment_date"/>
-                                </div>
-                                <div class="col-4">
-                                    <p style="margin-bottom:0px">
-                                        <b>Nº cliente</b>
-                                    </p>
-                                    <span t-field="doc.partner_id"/>
-                                </div>
-                                <div class="col-4">
+                                <div class="col">
                                     <p style="margin-bottom:0px">
                                         <b>Nº de pedido cliente</b>
                                     </p>
                                     <span t-field="doc.client_order_ref"/>
                                 </div>
+                                <div class="col">
+                                    <p style="margin-bottom:0px">
+                                        <b>Registrado por</b>
+                                    </p>
+                                    <span t-field="doc.user_id"/>
+                                </div>
+                                <div class="col">
+                                    <p style="margin-bottom:0px">
+                                        <b>Fecha entrega</b>
+                                    </p>
+                                    <span t-field="doc.commitment_date"/>
+                                </div>
                             </div>
                             <hr style="border-top: 1px solid black; margin: 6px;"/>
-                            <t t-call="rocafer_product_template_report.report_product_rocafer"/>
+                            <hr style="border-top: 1px solid black; margin: 6px;"/>
+                            <t t-call="rocafer_product_template_report.report_order_product_rocafer"/>
                         </div>
                     </t>
                 </t>
