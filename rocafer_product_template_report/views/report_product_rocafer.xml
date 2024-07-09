@@ -90,12 +90,12 @@
                             <!--FILA COLORES -->
                             <div class="row" style="margin: 4px">
                                 <div class="col-9">
-                                    <p style="margin-bottom:0px">
+                                    <p>
                                         <b>Colores</b>
                                     </p>
                                     <t t-foreach="o.color_ink_ids" t-as="color">
-                                        <span t-field="color.name"/>
-                                        <span style="margin-right: 8px">,</span>
+                                        <span t-field="color.name" class="border border-3 border-dark"
+                                              style="padding: 5px; margin-top: 10px;"/>
                                     </t>
                                 </div>
                                 <div class="col-3" style="margin-left: 40px">
