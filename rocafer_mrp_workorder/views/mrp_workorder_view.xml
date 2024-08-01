@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="rocafer_workorder_tree_view_inherit" model="ir.ui.view">
+        <field name="name">rocafer.workorder.tree</field>
+        <field name="model">mrp.workorder</field>
+        <field
+            name="inherit_id"
+            ref="mrp.mrp_production_workorder_tree_editable_view"
+        />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <!--EMPLEADO-->
+                <field name="employee_id" />
+                <!--FECHA DE PEDIDO-->
+                <field name="sale_order_id"/>
+                <!--FECHA DE ENTREGA-->
+<!--                <field name="commitment_date"/>-->
+            </field>
+        </field>
+    </record>
+</odoo>
