@@ -12,9 +12,9 @@
                 <!--EMPLEADO-->
                 <field name="employee_id" />
                 <!--FECHA DE PEDIDO-->
-                <field name="sale_order_id"/>
+                <field name="sale_id.date_order"/>
                 <!--FECHA DE ENTREGA-->
-<!--                <field name="commitment_date"/>-->
+                <field name="sale_id.commitment_date"/>
             </field>
         </field>
     </record>
