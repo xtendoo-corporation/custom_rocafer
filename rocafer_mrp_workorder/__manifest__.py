@@ -7,12 +7,18 @@
     "license": "LGPL-3",
     "application": True,
     "depends": [
+        'base',
+        'product',
+        'stock',
+        'purchase',
         'contacts',
         'mrp',
         'sale',
+        'mrp_sale_info',
     ],
     "data": [
         'views/mrp_workorder_view.xml',
+        'data/cron.xml',
     ],
     "installable": True,
 }

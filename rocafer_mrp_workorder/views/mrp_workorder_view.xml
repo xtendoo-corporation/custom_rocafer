@@ -11,10 +11,10 @@
             <field name="name" position="after">
                 <!--EMPLEADO-->
                 <field name="employee_id" />
+            </field>
+            <field name="partner_id" position="after">
                 <!--FECHA DE PEDIDO-->
-                <field name="sale_id.date_order"/>
-                <!--FECHA DE ENTREGA-->
-                <field name="sale_id.commitment_date"/>
+                <field name="date_order" widget="date" />
             </field>
         </field>
     </record>
