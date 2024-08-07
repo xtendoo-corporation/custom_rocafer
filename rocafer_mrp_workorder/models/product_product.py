@@ -25,4 +25,3 @@ class ProductProduct(models.Model):
         if record.detailed_type == 'product':
             self._create_orderpoints(record)
         return record
-
