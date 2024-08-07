@@ -4,14 +4,16 @@
 from odoo import fields, models, api
 
 
-class MrpWorkorder(models.Model):
+class MrpWorkOrder(models.Model):
     _inherit = "mrp.workorder"
 
     employee_id = fields.Many2one(
         comodel_name='hr.employee',
         string='Empleado',
     )
-
     date_order = fields.Datetime(
-        related="sale_id.date_order", string="Fecha de pedido", store=True, readonly=True,
+        related="sale_id.date_order",
+        string="Fecha de pedido",
+        store=True,
+        readonly=True,
     )
