@@ -18,7 +18,6 @@
     ],
     "data": [
         'views/mrp_workorder_view.xml',
-        'data/cron.xml',
     ],
     "installable": True,
 }
