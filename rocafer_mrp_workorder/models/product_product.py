@@ -16,6 +16,8 @@ class ProductProduct(models.Model):
             'warehouse_id': warehouse.id,
             'location_id': warehouse.lot_stock_id.id,
             'product_id': product.id,
+            # rute to mrp
+            'route_id': self.env.ref('mrp.route_warehouse0_manufacture').id,
         }
         self.env['stock.warehouse.orderpoint'].create(orderpoint)
 
