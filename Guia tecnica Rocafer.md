@@ -126,6 +126,7 @@ Una vez establecida la cantidad y el precio, vamos a la pestaña “Otra informa
 ![image17](https://github.com/user-attachments/assets/806a80ae-717f-4e58-beb0-f8ea6944c283)
 
 Confirmamos el presupuesto y este recibirá un número de presupuesto.
+
 ![image27](https://github.com/user-attachments/assets/c7695577-6ce8-4077-b719-b480cce33311)
 
 #### **Imprimir la orden de trabajo**
