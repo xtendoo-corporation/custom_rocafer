@@ -3,34 +3,34 @@
 ### **Crear un cliente.**
 
 Para crear un cliente vamos al módulo de Contactos.  
-![][image1]
+![image14](https://github.com/user-attachments/assets/39f3b60d-d6f0-49f9-aacb-293d856143e4)
 
 Cuando creemos un contacto al que vamos a realizar una venta/fabricacion debemos seleccionar que el contacto sea del tipo “Compañía”
 
-![][image2]
+![image8](https://github.com/user-attachments/assets/2c77c062-c639-4125-aa6f-f18d04ded5f5)
 
 ### 
 
 ### **Crear un producto.**
 
 Para crear un producto vamos al módulo de inventario.  
-![][image3]
+![image42](https://github.com/user-attachments/assets/c7ab399a-3d33-4ce0-9f40-0a86fb2fe975)
 
 En la barra superior encontraremos varias opciones, desde el apartado configuración nos aparecerá una serie de opciones clasificadas por una cabecera. Donde hay un apartado especial de Rocafer que es donde vamos a personalizar nuestros campos.  
-![][image4]
+![image37](https://github.com/user-attachments/assets/5a87e02a-1780-4a7c-ada9-43bfe9eeabe1)
 
 La configuración Colores/Estampaciones/Materiales/Barnices son idénticas vamos a tomar como ejemplo la configuración de colores.
 
 Seleccionamos “Color” y nos aparecerá un listado de colores registrados.  
-![][image5]
+![image24](https://github.com/user-attachments/assets/359dce1f-2163-4983-bb48-e570681625a6)
 
 #### **Añadir un elemento**
 
 Podemos añadir más colores seleccionando “+Nuevo”  
-![][image6]
+![image18](https://github.com/user-attachments/assets/da69f1a9-9bad-484e-85b3-b02d711af522)
 
 El nuevo color registrado aparecerá en la lista.  
-![][image7]
+![image20](https://github.com/user-attachments/assets/dc3c342c-9039-4375-84be-d45d3ec26f56)
 
 #### 
 
