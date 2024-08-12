@@ -79,7 +79,7 @@ Vamos a crear el producto “Etiqueta bote proteinas” para ello desde la lista
 ![image29](https://github.com/user-attachments/assets/b04a8888-5f59-45d2-a146-fe0731dcf65d)
 
 En la pestaña Inventario debe estar marcado “**Obtener Bajo Pedido (MTO)**” y “**Fabricar**”, la opción de “**Comprar**” **hay que desmarcarla** para generar una fabricación al realizarse una venta. Desde Xtendoo hemos definido por defecto que estos campos aparecen por defecto.
-![image10](https://github.com/user-attachments/assets/649e0b75-b0dd-40c0-8da0-bda97c20284a)
+![2024-08-12_10-24](https://github.com/user-attachments/assets/f61305de-ca7f-435a-9264-a2aeb808f7d6)
 
 En la pestaña Datos Rocafer es donde vamos a aportar toda la información sobre la fabricación de esta etiqueta.
 
