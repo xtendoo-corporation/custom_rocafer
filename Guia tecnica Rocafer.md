@@ -110,6 +110,16 @@ Al final de la página se pueden registrar comentarios para diversas áreas.
 Una vez terminado guardamos pulsando sobre la nube.  
 ![image2](https://github.com/user-attachments/assets/18bf5129-019d-412c-a637-cf301cb8555a)
 
+#### **Instrucciones de Fabricación**
+
+En la parte superior hay un botón para crear una lista de materiales para la fabricación del producto
+![image36](https://github.com/user-attachments/assets/aeb70a46-6c14-4c3c-87fc-7d34951e605c)
+
+![image4](https://github.com/user-attachments/assets/0a124e06-85d0-45e9-a6e3-e7a2f57157d5)
+
+En lista de materiales podemos establecer los componentes y las operaciones que necesitamos para la fabricación del producto, en nuestro caso iremos a operaciones y agregaremos las operaciones que necesite la fabricación del producto como puede ser Fabricación y Revisión.
+![image24](https://github.com/user-attachments/assets/b81afea0-5443-4f5a-9b77-f3c8ef32b483)
+
 ### **Realizar una venta del producto.**
 
 Para crear una venta o presupuesto vamos al módulo de Ventas.  
