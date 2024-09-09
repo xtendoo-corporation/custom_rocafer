@@ -52,7 +52,7 @@
                             <field name="material_width_separation" readonly="0"/>
 <!--                            <field name="amount"/>-->
 <!--                            <field name="linear_meters" readonly="0"/>-->
-<!--                            <field name="tolerance" readonly="0"/>-->
+                            <field name="tolerance" readonly="0"/>
                         </group>
                     </group>
                     <group string="Printing cylinder">

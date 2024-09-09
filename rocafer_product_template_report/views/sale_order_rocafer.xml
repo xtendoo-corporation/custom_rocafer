@@ -3,12 +3,15 @@
     <template id="sale_order_rocafer">
         <t t-call="web.html_container">
             <t t-call="web.external_layout">
+<!--*****************************************************************************************************************-->
                 <t t-set="docs" t-value="docs.with_context(proforma=True)"/>
                 <t t-foreach="docs" t-as="doc">
                     <t t-set="lines_to_report" t-value="doc._get_order_lines_to_report()"/>
                     <t t-set="display_discount" t-value="any(l.discount for l in lines_to_report)"/>
                     <t t-foreach="lines_to_report" t-as="current_line">
-                        <t t-set="product" t-value="current_line.product_id.product_tmpl_id"/>
+                        <t t-set="product_template" t-value="current_line.product_id.product_tmpl_id"/>
+                        <t t-set="product_line" t-value="current_line"/>
+<!--*****************************************************************************************************************-->
                         <div style="page-break-after: always;">
                             <h1 style="text-align: center">ORDEN DE TRABAJO</h1>
                             <!--FILA FECHA PEDIDO-->

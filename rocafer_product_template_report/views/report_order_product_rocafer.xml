@@ -1,264 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="report_order_product_rocafer">
-        <t t-set="o" t-value="product"/>
-        <div class="row row-cols-5" style="margin: 4px">
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Cliente</b>
-                </p>
-                <span t-field="doc.partner_id"/>
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Código etiqueta</b>
-                </p>
-                <span t-field="o.label_code"/>
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Descripción etiqueta</b>
-                </p>
-                <span t-field="o.name"/>
-            </div>
-        </div>
-        <hr style="border-top: 1px solid black; margin: 6px;"/>
-        <!--FILA TROQUEL-->
-        <div class="row row-cols-5" style="margin: 4px">
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Troquel nº</b>
-                </p>
-                <span t-field="o.troquel_number_1"/>
-                <t t-if="o.troquel_number_2">
-                    <br/>
-                    <span t-field="o.troquel_number_2"/>
-                </t>
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Figuras tq</b>
-                </p>
-                <span t-field="o.troquel_figure"/>
-                <t t-if="o.troquel_figure_2">
-                    <br/>
-                    <span t-field="o.troquel_figure_2"/>
-                </t>
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Z. IMP./COR.</b>
-                </p>
-                <span t-field="o.printing_cylinders"/>
-                <span>/</span>
-                <span t-field="o.cut_cylinders"/>
-
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Figuras montaje</b>
-                </p>
-                <group>
+        <t t-set="o" t-value="product_template"/>
+        <t t-set="pl" t-value="product_line"/>
+            <div class="row row-cols-5" style="margin: 4px">
+                <div class="col">
                     <p style="margin-bottom:0px">
-                        X:
-                        <span t-field="o.assembly_figure_x" style="margin-right: 4px"/>
-                        Y:
-                        <span t-field="o.assembly_figure_y"/>
+                        <b>Cliente</b>
                     </p>
-                </group>
+                    <span t-field="doc.partner_id"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Código etiqueta</b>
+                    </p>
+                    <span t-field="o.label_code"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Descripción etiqueta</b>
+                    </p>
+                    <span t-field="o.name"/>
+                </div>
             </div>
-        </div>
-        <hr style="border-top: 1px solid black; margin: 6px;"/>
-        <!--FILA CANTIDAD-->
-        <div class="row row-cols-5" style="margin: 4px">
-<!--            <div class="col">-->
-<!--                <p style="margin-bottom:0px">-->
-<!--                    <b>Cantidad</b>-->
-<!--                </p>-->
-<!--                <span t-field="o.amount"/>-->
-<!--            </div>-->
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Medidas</b>
-                </p>
-                <span t-field="o.label_height"/>
-                <span>X</span>
-                <span t-field="o.label_width"/>
+            <hr style="border-top: 1px solid black; margin: 6px;"/>
+            <!--FILA TROQUEL-->
+            <div class="row row-cols-5" style="margin: 4px">
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Troquel nº</b>
+                    </p>
+                    <span t-field="o.troquel_number_1"/>
+                    <t t-if="o.troquel_number_2">
+                        <br/>
+                        <span t-field="o.troquel_number_2"/>
+                    </t>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Figuras tq</b>
+                    </p>
+                    <span t-field="o.troquel_figure"/>
+                    <t t-if="o.troquel_figure_2">
+                        <br/>
+                        <span t-field="o.troquel_figure_2"/>
+                    </t>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Z. IMP./COR.</b>
+                    </p>
+                    <span t-field="o.printing_cylinders"/>
+                    <span>/</span>
+                    <span t-field="o.cut_cylinders"/>
+
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Figuras montaje</b>
+                    </p>
+                    <group>
+                        <p style="margin-bottom:0px">
+                            X:
+                            <span t-field="o.assembly_figure_x" style="margin-right: 4px"/>
+                            Y:
+                            <span t-field="o.assembly_figure_y"/>
+                        </p>
+                    </group>
+                </div>
             </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Material</b>
-                </p>
-                <span t-field="o.product_material"/>
+            <hr style="border-top: 1px solid black; margin: 6px;"/>
+            <!--FILA CANTIDAD-->
+            <div class="row row-cols-5" style="margin: 4px">
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Cantidad</b>
+                    </p>
+                    <span t-field="pl.product_uom_qty"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Medidas</b>
+                    </p>
+                    <span t-field="o.label_height"/>
+                    <span>X</span>
+                    <span t-field="o.label_width"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Material</b>
+                    </p>
+                    <span t-field="o.product_material"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Nº de Tintas</b>
+                    </p>
+                    <span t-field="o.ink_count"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Metros lineales</b>
+                    </p>
+<!--                    <span t-field="o.linear_meters"/>-->
+                    <span t-field="pl.linear_meters"/>
+                </div>
             </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Nº de Tintas</b>
-                </p>
-                <span t-field="o.ink_count"/>
+            <!--FILA COLORES -->
+            <div class="row" style="margin: 4px">
+                <div class="col-9">
+                    <p>
+                        <b>Colores</b>
+                    </p>
+                    <t t-foreach="o.color_ink_ids" t-as="color">
+                        <span t-field="color.name" class="border border-3 border-dark"
+                              style="padding: 5px; margin-top: 10px;"/>
+                    </t>
+                </div>
+                <div class="col-3" style="margin-left: 40px">
+                    <p style="margin-bottom:0px">
+                        <b>Nº Grabados</b>
+                    </p>
+                    <span t-field="o.engravings_number"/>
+                </div>
             </div>
-<!--            <div class="col">-->
-<!--                <p style="margin-bottom:0px">-->
-<!--                    <b>Metros lineales</b>-->
-<!--                </p>-->
-<!--                <span t-field="o.linear_meters"/>-->
-<!--            </div>-->
-        </div>
-        <!--FILA COLORES -->
-        <div class="row" style="margin: 4px">
-            <div class="col-9">
-                <p>
-                    <b>Colores</b>
-                </p>
-                <t t-foreach="o.color_ink_ids" t-as="color">
-                    <span t-field="color.name" class="border border-3 border-dark"
-                          style="padding: 5px; margin-top: 10px;"/>
-                </t>
+            <div class="row" style="margin: 4px">
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Indicaciones Preimpresión</b>
+                    </p>
+                    <span t-field="o.preprint_comments"/>
+                </div>
             </div>
-            <div class="col-3" style="margin-left: 40px">
-                <p style="margin-bottom:0px">
-                    <b>Nº Grabados</b>
-                </p>
-                <span t-field="o.engravings_number"/>
+            <hr style="border-top: 1px solid black; margin: 6px;"/>
+            <!--FILA BARNIZ-->
+            <div class="row row-cols-5" style="margin: 4px">
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Barniz</b>
+                    </p>
+                    <t t-if="o.product_varnish">
+                        <span t-field="o.product_varnish"/>
+                    </t>
+                    <t t-else="">
+                        <span>No</span>
+                    </t>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Estampación</b>
+                    </p>
+                    <t t-if="o.product_stamping">
+                        <span t-field="o.product_stamping"/>
+                    </t>
+                    <t t-else="">
+                        <span>No</span>
+                    </t>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Serigrafía</b>
+                    </p>
+                    <!--                                 <span t-field="o.serigraphy"/>-->
+                    <t t-if="o.serigraphy == 1">
+                        <span>Si</span>
+                    </t>
+                    <t t-if="o.serigraphy == 0">
+                        <span>No</span>
+                    </t>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Relieve</b>
+                    </p>
+                    <!--                                <span t-field="o.relief"/>-->
+                    <t t-if="o.relief == 1">
+                        <span>Si</span>
+                    </t>
+                    <t t-if="o.relief == 0">
+                        <span>No</span>
+                    </t>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Plastificado</b>
+                    </p>
+                    <t t-if="o.laminated">
+                        <span t-field="o.laminated"/>
+                    </t>
+                    <t t-else="">
+                        <span>No</span>
+                    </t>
+                </div>
             </div>
-        </div>
-        <div class="row" style="margin: 4px">
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Indicaciones Preimpresión</b>
-                </p>
-                <span t-field="o.preprint_comments"/>
+            <!--FILA OTROS ACABADOS-->
+            <div class="row" style="margin: 4px">
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Otros acabados</b>
+                    </p>
+                    <span t-field="o.other_finishes"/>
+                </div>
             </div>
-        </div>
-        <hr style="border-top: 1px solid black; margin: 6px;"/>
-        <!--FILA BARNIZ-->
-        <div class="row row-cols-5" style="margin: 4px">
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Barniz</b>
-                </p>
-                <t t-if="o.product_varnish">
-                    <span t-field="o.product_varnish"/>
-                </t>
-                <t t-else="">
-                    <span>No</span>
-                </t>
+            <!--FILA CANT ETIQ SALIDA-->
+            <hr style="border-top: 1px solid black; margin: 6px;"/>
+            <div class="row row-cols-5" style="margin: 4px">
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Cantidad etiq.salida</b>
+                    </p>
+                    <span t-field="o.amount_label_exit"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Ø Interior del rollo</b>
+                    </p>
+                    <span t-field="o.inner_diameter_roll"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Ø Exterior del rollo</b>
+                    </p>
+                    <span t-field="o.outer_diameter_roll"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Cantidad etiq. rollo</b>
+                    </p>
+                    <span t-field="o.quantity_label_roll"/>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Orientación</b>
+                    </p>
+                    <t t-if="o.print_orientation_id">
+                        <span t-if="o.image_orientation">
+                            <field name="o.image_orientation">
+                                <img
+                                    t-att-src="'data:image/png;base64,%s' % o.print_orientation_id.image"/>
+                            </field>
+                        </span>
+                    </t>
+                </div>
             </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Estampación</b>
-                </p>
-                <t t-if="o.product_stamping">
-                    <span t-field="o.product_stamping"/>
-                </t>
-                <t t-else="">
-                    <span>No</span>
-                </t>
+            <div class="row" style="margin: 4px">
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Numeradas</b>
+                    </p>
+                    <t t-if="o.regulatory_council_numbering">
+                        <img
+                            src="rocafer_product_template/static/img/regulatorylogo.png"/>
+                    </t>
+                </div>
             </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Serigrafía</b>
-                </p>
-                <!--                                 <span t-field="o.serigraphy"/>-->
-                <t t-if="o.serigraphy == 1">
-                    <span>Si</span>
-                </t>
-                <t t-if="o.serigraphy == 0">
-                    <span>No</span>
-                </t>
+            <div class="row" style="margin: 4px">
+                <div class="col">
+                    <p style="margin-bottom:0px">
+                        <b>Indicaciones para revisadores/expedición</b>
+                    </p>
+                    <span t-field="o.reviewers_expedition"/>
+                </div>
             </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Relieve</b>
-                </p>
-                <!--                                <span t-field="o.relief"/>-->
-                <t t-if="o.relief == 1">
-                    <span>Si</span>
-                </t>
-                <t t-if="o.relief == 0">
-                    <span>No</span>
-                </t>
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Plastificado</b>
-                </p>
-                <t t-if="o.laminated">
-                    <span t-field="o.laminated"/>
-                </t>
-                <t t-else="">
-                    <span>No</span>
-                </t>
-            </div>
-        </div>
-        <!--FILA OTROS ACABADOS-->
-        <div class="row" style="margin: 4px">
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Otros acabados</b>
-                </p>
-                <span t-field="o.other_finishes"/>
-            </div>
-        </div>
-        <!--FILA CANT ETIQ SALIDA-->
-        <hr style="border-top: 1px solid black; margin: 6px;"/>
-        <div class="row row-cols-5" style="margin: 4px">
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Cantidad etiq.salida</b>
-                </p>
-                <span t-field="o.amount_label_exit"/>
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Ø Interior del rollo</b>
-                </p>
-                <span t-field="o.inner_diameter_roll"/>
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Ø Exterior del rollo</b>
-                </p>
-                <span t-field="o.outer_diameter_roll"/>
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Cantidad etiq. rollo</b>
-                </p>
-                <span t-field="o.quantity_label_roll"/>
-            </div>
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Orientación</b>
-                </p>
-                <t t-if="o.print_orientation_id">
-                    <span t-if="o.image_orientation">
-                        <field name="o.image_orientation">
-                            <img
-                                t-att-src="'data:image/png;base64,%s' % o.print_orientation_id.image"/>
-                        </field>
-                    </span>
-                </t>
-            </div>
-        </div>
-        <div class="row" style="margin: 4px">
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Numeradas</b>
-                </p>
-                <t t-if="o.regulatory_council_numbering">
-                    <img
-                        src="rocafer_product_template/static/img/regulatorylogo.png"/>
-                </t>
-            </div>
-        </div>
-        <div class="row" style="margin: 4px">
-            <div class="col">
-                <p style="margin-bottom:0px">
-                    <b>Indicaciones para revisadores/expedición</b>
-                </p>
-                <span t-field="o.reviewers_expedition"/>
-            </div>
-        </div>
+            <!--            </t>-->
+<!--        </t>-->
     </template>
 </odoo>

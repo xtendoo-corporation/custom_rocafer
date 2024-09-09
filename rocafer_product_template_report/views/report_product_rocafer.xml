@@ -54,10 +54,12 @@
                             <hr style="border-top: 1px solid black; margin: 6px;"/>
                             <!--FILA CANTIDAD-->
                             <div class="row row-cols-5" style="margin: 4px">
+<!--                                Imprimir la cantidad del producto desde sale order line, product_uom_qty-->
 <!--                                <div class="col">-->
 <!--                                    <p style="margin-bottom:0px">-->
 <!--                                        <b>Cantidad</b>-->
 <!--                                    </p>-->
+<!--                                    <span t-field="producto.product_uom_qty"/>-->
 <!--                                    <span t-field="o.amount"/>-->
 <!--                                </div>-->
                                 <div class="col">
