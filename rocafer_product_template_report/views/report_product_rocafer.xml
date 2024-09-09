@@ -54,12 +54,12 @@
                             <hr style="border-top: 1px solid black; margin: 6px;"/>
                             <!--FILA CANTIDAD-->
                             <div class="row row-cols-5" style="margin: 4px">
-                                <div class="col">
-                                    <p style="margin-bottom:0px">
-                                        <b>Cantidad</b>
-                                    </p>
-                                    <span t-field="o.amount"/>
-                                </div>
+<!--                                <div class="col">-->
+<!--                                    <p style="margin-bottom:0px">-->
+<!--                                        <b>Cantidad</b>-->
+<!--                                    </p>-->
+<!--                                    <span t-field="o.amount"/>-->
+<!--                                </div>-->
                                 <div class="col">
                                     <p style="margin-bottom:0px">
                                         <b>Medidas</b>
@@ -80,12 +80,12 @@
                                     </p>
                                     <span t-field="o.ink_count"/>
                                 </div>
-                                <div class="col">
-                                    <p style="margin-bottom:0px">
-                                        <b>Metros lineales</b>
-                                    </p>
-                                    <span t-field="o.linear_meters"/>
-                                </div>
+<!--                                <div class="col">-->
+<!--                                    <p style="margin-bottom:0px">-->
+<!--                                        <b>Metros lineales</b>-->
+<!--                                    </p>-->
+<!--                                    <span t-field="o.linear_meters"/>-->
+<!--                                </div>-->
                             </div>
                             <!--FILA COLORES -->
                             <div class="row" style="margin: 4px">
