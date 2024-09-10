@@ -3,16 +3,14 @@
 
 from odoo import fields, models, api
 
-class MrpOperation(models.Model):
-    _name = "mrp.routing.workcenter"
-    _description = "Mrp Operation"
+class OperationType(models.Model):
+    _name = 'operation.type'
+    _description = 'Operación id'
 
-    name = fields.Char(
-        string="Mrp Operation"
-    )
+    name = fields.Char('Operación id', required=True)
 
-    mrp_workorder_operation = fields.One2many(
+    mrp_workorder_operation_type = fields.One2many(
         comodel_name='mrp.workorder',
-        inverse_name='name',
+        inverse_name='operation_type',
         string='Operación',
     )

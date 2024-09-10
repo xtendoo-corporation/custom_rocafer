@@ -7,10 +7,10 @@ from odoo import fields, models, api
 class MrpWorkOrder(models.Model):
     _inherit = "mrp.workorder"
 
-    # name = fields.Many2one(
-    #     comodel_name='mrp.operation',
-    #     string='Operación',
-    # )
+    operation_type = fields.Many2one(
+        comodel_name="operation.type",
+        string="Operación"
+    )
 
     employee_id = fields.Many2one(
         comodel_name='hr.employee',
