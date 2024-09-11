@@ -166,3 +166,49 @@ Se mostrarán las órdenes de trabajo que aún no estén finalizadas, para visua
 
 Esto mostrará las órdenes de trabajo agrupadas por los centros de trabajo y toda la información de la venta.  
 ![image41](https://github.com/user-attachments/assets/9eb6a87f-4f37-4083-84ee-0719549c20f0)
+
+Una vez finalizada la orden de trabajo daremos por finalizada la fabricación pulsando sobre el botón “Producir todo”  
+![image2](https://github.com/user-attachments/assets/83129c3b-dade-4b68-8c41-abf93719c787)
+
+Es posible que salte una advertencia de confirmación, no es relevante en nuestro caso de uso ya que nuestros productos no se forman a partir de otros componentes.  
+![image1](https://github.com/user-attachments/assets/7930ab7d-8320-4aca-88af-fa1cc12a21cb)
+
+### **Entregas**
+
+Volvemos a la venta de nuestro producto y ahora si pulsamos en “Entrega” obtendremos información relevante sobre nuestra venta.  
+![image3](https://github.com/user-attachments/assets/194ab99e-bc7f-4175-8e6a-eb6ea74f8623)
+
+Los campos más relevantes son los siguientes, donde la demanda es la cantidad total del pedido y la cantidad es la cantidad que vamos a entregar, de esta forma Odoo nos permite crear entregas parciales.
+![image6](https://github.com/user-attachments/assets/1850134b-cb0a-4c47-91e1-404c1b2eb435)
+
+Para imprimir un albarán únicamente debemos pulsar en el botón “Imprimir”, esto creará un albarán donde la entrega aún no ha salido del origen.  
+![image7](https://github.com/user-attachments/assets/52222a17-77f7-409a-b7fc-b4526056ff5a)
+
+El estado de nuestros albaranes/entregas se muestra en la parte superior.   
+![image13](https://github.com/user-attachments/assets/e6925082-fbf1-4433-83d7-37eb8009937d)
+
+En el momento que pulsemos “Validar” nuestra entrega ya habrá salido del origen.  
+![image5](https://github.com/user-attachments/assets/72ff7da7-ea8f-43f6-a1c9-9806390dcffe)
+
+Ahora el estado de nuestra entrega cambia a “Hecho”  
+![image9](https://github.com/user-attachments/assets/9a673da3-bb8c-4799-a798-9efcb0c2b10e)
+
+Imprimir albarán  
+![image7](https://github.com/user-attachments/assets/85adb86c-0647-4eca-9b88-82b40084bf59)
+
+Imprimir albarán valorado  
+![image4](https://github.com/user-attachments/assets/c3d2af8d-ece0-4c2c-94e8-1fb16c432654)
+
+### **Facturación**
+
+En el pedido podemos crear la factura pulsando sobre el botón “Crear Factura”  
+![image8](https://github.com/user-attachments/assets/daf0c470-11c6-4be4-a177-395e38884147)
+
+La factura se creará como borrador, es el momento de indicar la fecha de la factura, la referencia el pago, su vencimiento…  
+![image11](https://github.com/user-attachments/assets/110acee2-49d4-41f1-9525-b93bfd8a8144)
+
+A qué cuenta contable irá cada línea de producto  
+![image12](https://github.com/user-attachments/assets/4bca49a0-e3b2-4004-9afa-08bdd148e08d)
+
+Una vez rellenados estos datos confirmaremos nuestro borrador y podemos enviar la factura al cliente, registrar su pago…  
+![image10](https://github.com/user-attachments/assets/604b3056-5510-4a7f-b110-d5ca4e8a94aa)
