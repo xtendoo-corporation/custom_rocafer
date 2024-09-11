@@ -9,8 +9,6 @@
         />
         <field name="arch" type="xml">
             <field name="name" position="after">
-                <!--OPERACIÓN-->
-                <field name="operation_type" />
                 <!--EMPLEADO-->
                 <field name="employee_id" />
             </field>

@@ -1,26 +1,18 @@
 <odoo>
-    <!--Muestra el campo operation_id en la vista de árbol de la ruta de fabricación.-->
-    <record id="mrp_routing_workcenter_tree_view_inherit" model="ir.ui.view">
-        <field name="name">mrp.routing.workcenter.tree.inherit</field>
-        <field name="model">mrp.routing.workcenter</field>
-        <field name="inherit_id" ref="mrp.mrp_routing_workcenter_tree_view"/>
-        <field name="arch" type="xml">
-            <field name="name" position="after">
-<!--                <field name="operation_id"/>-->
-                <field name="operation_selection"/>
-            </field>
-        </field>
-    </record>
     <!--Muestra el campo operation_id en la formulario de la ficha de centro de trabajo de la ruta de fabricación.-->
     <record id="mrp_routing_workcenter_form_view_inherit" model="ir.ui.view">
         <field name="name">mrp.routing.workcenter.form.inherit</field>
         <field name="model">mrp.routing.workcenter</field>
         <field name="inherit_id" ref="mrp.mrp_routing_workcenter_form_view"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='name']" position="after">
-<!--                <field name="operation_id"/>-->
-                <field name="operation_selection"/>
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="operation_selection" options="{'no_create': True}"/>
             </xpath>
+<!--            <xpath expr="//field[@name='name']" position="attributes">-->
+<!--                <attribute-->
+<!--                        name="attrs">{'invisible':True}-->
+<!--                </attribute>-->
+<!--            </xpath>-->
         </field>
     </record>
 

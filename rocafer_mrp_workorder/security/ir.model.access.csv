@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-rocafer_mrp_workorder.access_operation_type,access_operation_type,rocafer_mrp_workorder.model_operation_type,base.group_user,1,1,1,1
