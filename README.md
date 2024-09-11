@@ -179,6 +179,7 @@ Volvemos a la venta de nuestro producto y ahora si pulsamos en “Entrega” obt
 ![image3](https://github.com/user-attachments/assets/194ab99e-bc7f-4175-8e6a-eb6ea74f8623)
 
 Los campos más relevantes son los siguientes, donde la demanda es la cantidad total del pedido y la cantidad es la cantidad que vamos a entregar, de esta forma Odoo nos permite crear entregas parciales.
+
 ![image6](https://github.com/user-attachments/assets/1850134b-cb0a-4c47-91e1-404c1b2eb435)
 
 Para imprimir un albarán únicamente debemos pulsar en el botón “Imprimir”, esto creará un albarán donde la entrega aún no ha salido del origen.  
