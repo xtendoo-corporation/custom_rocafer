@@ -120,6 +120,9 @@ En la parte superior hay un botón para crear una lista de materiales para la fa
 En lista de materiales podemos establecer los componentes y las operaciones que necesitamos para la fabricación del producto, en nuestro caso iremos a operaciones y agregaremos las operaciones que necesite la fabricación del producto como puede ser Fabricación y Revisión.
 ![image24](https://github.com/user-attachments/assets/b81afea0-5443-4f5a-9b77-f3c8ef32b483)
 
+A la hora de crear una fabricación deberiamos de seleccionar "Calcular según el tiempo registrado" para que se haga una estimación del tiempo de fabricación segun las ultimas 10 fabricaciones. 
+![2024-09-25_11-46](https://github.com/user-attachments/assets/2a265219-ac02-4495-a693-937e049e0543)
+
 ### **Realizar una venta del producto.**
 
 Para crear una venta o presupuesto vamos al módulo de Ventas.  
