@@ -12,6 +12,13 @@ class MrpRoutingWorkcenterInherit(models.Model):
         string='Operación',
     )
 
+    time_cycle_manual = fields.Float(
+        'Manual Duration', default=00.00,
+        help="Time in minutes:"
+        "- In manual mode, time used"
+        "- In automatic mode, supposed first time when there aren't any work orders yet"
+    )
+
     @api.onchange('operation_selection')
     def _onchange_operation_selection(self):
         if self.operation_selection:

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <template id="rocafer_custom_report.report_picking_inherited"
-              inherit_id="stock.report_package_barcode">
-        <xpath expr="//div[@name='datamatrix_barcode']" position="replace">
-
-        </xpath>
+              inherit_id="stock_picking_batch.report_picking_batch">
+        <xpath expr="//div/div[3]" position="replace"/>
+        <xpath expr="//div/div[2]" position="replace"/>
+        <xpath expr="//div/div[2]/strong[1]" position="replace"/>
+        <xpath expr="//div/div[2]/span[1]" position="replace"/>
+        <xpath expr="//div/br[1]" position="replace"/>
+        <xpath expr="//div/div[1]" position="replace"/>
+        <xpath expr="//table[1]" position="replace"/>
+        <xpath expr="//p" position="replace"/>
     </template>
 </odoo>

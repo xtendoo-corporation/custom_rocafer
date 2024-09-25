@@ -10,7 +10,7 @@
     "license": "AGPL-3",
     "data": [
         # "views/stock_picking_report.xml",
-        #"views/stock_package_report.xml",
+        "views/stock_package_report.xml",
         "reports/rocafer_report.xml",
 
     ],
