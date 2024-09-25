@@ -24,11 +24,24 @@ class SaleOrderLine(models.Model):
         store=True
     )
 
-    @api.depends('assembly_figure_x_from_product_template', 'printing_cylinder_size_from_product_template', 'tolerance_from_product_template', 'product_uom_qty')
+    @api.depends('assembly_figure_x_from_product_template', 'printing_cylinder_size_from_product_template',
+                 'tolerance_from_product_template', 'product_uom_qty')
     def _compute_meters(self):
         self.linear_meters = 0
         for record in self.filtered(lambda r: r.assembly_figure_x_from_product_template):
-            if (record.tolerance_from_product_template == 0):
-                record.linear_meters = (record.product_uom_qty / 1000 * record.printing_cylinder_size_from_product_template) / record.assembly_figure_x_from_product_template
+            if record.tolerance_from_product_template == 0:
+                record.linear_meters = round((
+                                                   record.product_uom_qty / 1000 * record.printing_cylinder_size_from_product_template) / record.assembly_figure_x_from_product_template)
             else:
-                record.linear_meters = (record.product_uom_qty / 1000 * record.printing_cylinder_size_from_product_template) / record.assembly_figure_x_from_product_template * (1 + record.tolerance_from_product_template / 100)
+                record.linear_meters = round((
+                                                   record.product_uom_qty / 1000 * record.printing_cylinder_size_from_product_template) / record.assembly_figure_x_from_product_template * (
+                                                   1 + record.tolerance_from_product_template / 100))
+
+    # @api.depends('assembly_figure_x_from_product_template', 'printing_cylinder_size_from_product_template', 'tolerance_from_product_template', 'product_uom_qty')
+    # def _compute_meters(self):
+    #     self.linear_meters = 0
+    #     for record in self.filtered(lambda r: r.assembly_figure_x_from_product_template):
+    #         if (record.tolerance_from_product_template == 0):
+    #             record.linear_meters = (record.product_uom_qty / 1000 * record.printing_cylinder_size_from_product_template) / record.assembly_figure_x_from_product_template
+    #         else:
+    #             record.linear_meters = (record.product_uom_qty / 1000 * record.printing_cylinder_size_from_product_template) / record.assembly_figure_x_from_product_template * (1 + record.tolerance_from_product_template / 100)

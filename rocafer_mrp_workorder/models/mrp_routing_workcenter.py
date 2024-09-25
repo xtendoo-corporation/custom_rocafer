@@ -4,13 +4,12 @@
 from odoo import fields, models, api, _
 
 
-class MrpRoutingWorkcenter(models.Model):
+class MrpRoutingWorkcenterInherit(models.Model):
     _inherit = 'mrp.routing.workcenter'
 
     operation_selection = fields.Many2one(
-        'mrp.routing.workcenter',
-        string='Elegir operación',
-        domain=['|', ('bom_id', '=', False), ('bom_id.active', '=', True)],
+        'workcenter.operation',
+        string='Operación',
     )
 
     @api.onchange('operation_selection')

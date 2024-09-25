@@ -76,15 +76,15 @@
                     <p style="margin-bottom:0px">
                         <b>Cantidad</b>
                     </p>
-                    <span t-field="pl.product_uom_qty"/>
+                    <span t-esc="int(pl.product_uom_qty)"/>
                 </div>
                 <div class="col">
                     <p style="margin-bottom:0px">
                         <b>Medidas</b>
                     </p>
-                    <span t-field="o.label_height"/>
+                    <span t-esc="int(o.label_height)"/>
                     <span>X</span>
-                    <span t-field="o.label_width"/>
+                    <span t-esc="int(o.label_width)"/>
                 </div>
                 <div class="col">
                     <p style="margin-bottom:0px">
@@ -102,19 +102,18 @@
                     <p style="margin-bottom:0px">
                         <b>Metros lineales</b>
                     </p>
-<!--                    <span t-field="o.linear_meters"/>-->
-                    <span t-field="pl.linear_meters"/>
+                    <span t-esc="int(pl.linear_meters)" />
                 </div>
             </div>
             <!--FILA COLORES -->
             <div class="row" style="margin: 4px">
                 <div class="col-9">
-                    <p>
+                    <p style="margin-bottom: 0;">
                         <b>Colores</b>
                     </p>
                     <t t-foreach="o.color_ink_ids" t-as="color">
                         <span t-field="color.name" class="border border-3 border-dark"
-                              style="padding: 5px; margin-top: 10px;"/>
+                              style="padding: 5px; margin-top: 10px; display: inline-block;"/>
                     </t>
                 </div>
                 <div class="col-3" style="margin-left: 40px">

@@ -9,8 +9,10 @@
     "depends": ["stock", "stock_picking_report_valued"],
     "license": "AGPL-3",
     "data": [
-        # "views/stock_picking_report_unvalued.xml",
+        # "views/stock_picking_report.xml",
+        #"views/stock_package_report.xml",
         "reports/rocafer_report.xml",
+
     ],
     "installable": True,
 }
