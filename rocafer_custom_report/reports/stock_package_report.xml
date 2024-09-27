@@ -9,6 +9,8 @@
         <xpath expr="//div/br[1]" position="replace"/>
         <xpath expr="//div/div[1]" position="replace"/>
         <xpath expr="//table[1]" position="replace"/>
+        <xpath expr="//strong[1]" position="replace"/>
+        <xpath expr="//span[@t-field='o.user_id']" position="replace"/>
         <!--Muestra los datos del cliente-->
         <xpath expr="//p" position="after">
             <t t-foreach="locations" t-as="location_from">
@@ -26,7 +28,6 @@
                 </t>
             </t>
         </xpath>
-<!--        <xpath expr="//div[t-if='o.user_id']" position="replace"/>-->
         <xpath expr="//p" position="replace"/>
         <xpath expr="//thead/tr[1]/th[1]" position="replace">
             <th>Descripción</th>
