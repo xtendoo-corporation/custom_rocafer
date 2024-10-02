@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>
-    <template id="rocafer_custom_report.stock_package_report_inherited"
-              inherit_id="stock.report_package_barcode">
-        <xpath expr="//tbody[1]" position="replace">
-        </xpath>
-    </template>
-</odoo>

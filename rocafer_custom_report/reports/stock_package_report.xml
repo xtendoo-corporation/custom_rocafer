@@ -58,6 +58,5 @@
         <xpath expr="//thead/tr[1]/th[4]" position="replace"/>
         <xpath expr="//tbody/tr[2]/td[4]" position="replace"/>
         <xpath expr="//tbody/tr[1]" position="replace"/>
-
     </template>
 </odoo>

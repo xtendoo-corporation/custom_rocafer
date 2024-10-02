@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_picking_form_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='do_print_picking']" position="replace">
+                    <button name="do_print_picking_valued" string="Imprimir" groups="stock.group_stock_user"
+                            type="object"
+                            invisible="state != 'assigned'" data-hotkey="o"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+
+    <template id="stock_picking_report_valued"
+              inherit_id="stock_picking_report_valued.valued_report_picking">
+<!--        <xpath expr="//t[@t-set='is_outgoing']" position="replace">-->
+
+<!--        </xpath>-->
+        <!--Reemplazar el contenido de la tabla de precios unitarios, descuentos, subtotales y impuestos si el usuario tiene el grupo de stock.manager.-->
+        <xpath expr="//table[@class='table table-sm mt32']" position="replace">
+            <!--        <xpath expr="//t[@t-if='o.valued and o.sale_id and o.move_line_ids and is_outgoing']" position="replace">-->
+            <t t-if="o.valued and o.sale_id and o.move_line_ids and o.env.user.has_group('stock.group_stock_manager')">
+                <table class="table table-sm mt32">
+                    <thead>
+                        <tr>
+                            <th class="text-end">
+                                <strong>Base imponible</strong>
+                            </th>
+                            <th class="text-end">
+                                <strong>Impuestos</strong>
+                            </th>
+                            <th class="text-end">
+                                <strong>Total</strong>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-end">
+                                <span t-field="o.amount_untaxed"/>
+                            </td>
+                            <td class="text-end">
+                                <span t-field="o.amount_tax"/>
+                            </td>
+                            <td class="text-end">
+                                <span t-field="o.amount_total"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </t>
+        </xpath>
+        <!--        Fin tabla pie-->
+        <!--        Tabla de precios unitarios, descuentos, subtotales y impuestos-->
+        <xpath expr="//table[@name='stock_move_line_table']/thead/tr" position="replace">
+            <th class="text-end">
+                <strong>Producto</strong>
+            </th>
+            <th class="text-end">
+                <strong>Cantidad</strong>
+            </th>
+            <t t-if="o.valued and o.sale_id and o.move_line_ids and o.env.user.has_group('stock.group_stock_manager')">
+                <th class="text-end">
+                    <strong>Precio</strong>
+                </th>
+                <th class="text-end" groups="product.group_discount_per_so_line">
+                    <strong>Descuento</strong>
+                </th>
+                <th class="text-end">
+                    <strong>Subtotal</strong>
+                </th>
+                <th class="text-end">
+                    <strong>Impuestos</strong>
+                </th>
+            </t>
+        </xpath>
+        <!--*******************************************************************-->
+
+    </template>
+
+
+    <template id="rocafer_custom_report.valued_report_picking_has_serial_move_line_inherit"
+              inherit_id="stock_picking_report_valued.valued_report_picking_has_serial_move_line">
+        <xpath expr="//t[@t-if='o.valued and o.sale_id and o.move_line_ids and is_outgoing']" position="replace">
+            <t t-if="o.valued and o.sale_id and o.move_line_ids and o.env.user.has_group('stock.group_stock_manager')">
+                <td class="text-end">
+                    <span t-field="move_line.sale_price_unit"/>
+                </td>
+                <td class="text-end" groups="product.group_discount_per_so_line">
+                    <span t-field="move_line.sale_discount"/>
+                </td>
+                <td class="text-end">
+                    <span
+                        t-field="move_line.sale_price_subtotal"
+                    />
+                </td>
+                <td class="text-end">
+                    <span
+                        t-field="move_line.sale_tax_description"
+                    />
+                </td>
+            </t>
+        </xpath>
+    </template>
+</odoo>
