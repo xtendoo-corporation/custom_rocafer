@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_picking_form_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='do_print_picking']" position="after">
+                    <button name="action_stock_picking_report_valued"
+                            string="Imprimir valorado"
+                            groups="stock.group_stock_user"
+                            type="object"
+                            data-hotkey="o"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -6,12 +6,14 @@
     "company": "Xtendoo",
     "website": "http://www.xtendoo.es",
     "category": "Warehouse Management",
-    "depends": ['stock_picking_report_valued', 'stock'],
+    "depends": [
+        'stock',
+        'stock_picking_report_valued',
+    ],
     "license": "AGPL-3",
     "data": [
-        "reports/stock_package_report.xml",
         "reports/stock_picking_report_valued.xml",
-        # "reports/rocafer_report.xml",
+        "views/stock_picking_view.xml",
     ],
     "installable": True,
 }
