@@ -13,6 +13,7 @@
     "license": "AGPL-3",
     "data": [
         "reports/stock_picking_report_valued.xml",
+        "reports/stock_package_report.xml",
         "views/stock_picking_view.xml",
     ],
     "installable": True,
