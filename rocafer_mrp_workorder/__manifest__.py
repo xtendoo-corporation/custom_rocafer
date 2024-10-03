@@ -19,6 +19,8 @@
     "data": [
         'views/mrp_workorder_view.xml',
         'views/mrp_routing_workcenter_view.xml',
+        'views/work_order_rocafer.xml',
+        'reports/rocafer_report.xml',
         'security/ir.model.access.csv',
     ],
     "installable": True,

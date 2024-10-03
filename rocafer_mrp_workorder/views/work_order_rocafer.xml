@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="work_order_rocafer">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <!--*****************************************************************************************************************-->
+                    <t t-set="lines_to_report" t-value="doc.sale_id._get_order_lines_to_report()"/>
+                    <t t-set="display_discount" t-value="any(l.discount for l in lines_to_report)"/>
+                    <t t-foreach="lines_to_report" t-as="current_line">
+                        <t t-set="product_template" t-value="current_line.product_id.product_tmpl_id"/>
+                        <t t-set="product_line" t-value="current_line"/>
+                        <!--*****************************************************************************************************************-->
+                        <div style="page-break-after: always;">
+                            <h1 style="text-align: center">ORDEN DE TRABAJO</h1>
+                            <!--FILA FECHA PEDIDO-->
+                            <div class="row row-cols-5" style="margin: 4px">
+                                <div class="col">
+                                    <p style="margin-bottom:0px">
+                                        <b>Fecha pedido</b>
+                                    </p>
+                                    <span t-field="doc.sale_id.date_order" t-options='{"widget": "date"}'/>
+                                </div>
+                                <div class="col">
+                                    <p style="margin-bottom:0px">
+                                        <b>Nº de pedido cliente</b>
+                                    </p>
+                                    <span t-field="doc.sale_id.client_order_ref"/>
+                                </div>
+                                <div class="col">
+                                    <p style="margin-bottom:0px">
+                                        <b>Nº orden</b>
+                                    </p>
+                                    <span t-field="doc.sale_id.name"/>
+                                </div>
+                                <div class="col">
+                                    <p style="margin-bottom:0px">
+                                        <b>Registrado por</b>
+                                    </p>
+                                    <span t-field="doc.sale_id.user_id"/>
+                                </div>
+                                <div class="col">
+                                    <p style="margin-bottom:0px">
+                                        <b>Fecha entrega</b>
+                                    </p>
+                                    <span t-field="doc.sale_id.commitment_date" t-options='{"widget": "date"}'/>
+                                </div>
+                            </div>
+                            <hr style="border-top: 1px solid black; margin: 6px;"/>
+                            <t t-call="rocafer_product_template_report.report_order_product_rocafer"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </t>
+
+    </template>
+</odoo>
