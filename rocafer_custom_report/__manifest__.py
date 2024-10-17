@@ -9,6 +9,7 @@
     "depends": [
         'stock',
         'stock_picking_report_valued',
+        'stock_picking_batch',
     ],
     "license": "AGPL-3",
     "data": [
