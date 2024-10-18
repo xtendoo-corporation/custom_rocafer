@@ -7,6 +7,16 @@ from odoo import fields, models, api
 class MrpWorkOrder(models.Model):
     _inherit = "mrp.workorder"
 
+    routing_workcenter_id = fields.Many2one(
+        comodel_name='workcenter.operation',
+        string='Operación',
+    )
+
+    def get_operation_selection(self):
+        if self.routing_workcenter_id:
+            return self.routing_workcenter_id.operation_selection.name
+        return False
+
     employee_id = fields.Many2one(
         comodel_name='hr.employee',
         string='Empleado',

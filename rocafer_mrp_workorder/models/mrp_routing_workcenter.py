@@ -8,7 +8,7 @@ class MrpRoutingWorkcenterInherit(models.Model):
     _inherit = 'mrp.routing.workcenter'
 
     operation_selection = fields.Many2one(
-        'workcenter.operation',
+        comodel_name='workcenter.operation',
         string='Operación',
     )
 
