@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="mrp.mrp_routing_workcenter_form_view"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']" position="before">
-                <field name="operation_selection" options="{'no_create': False}"/>
+                <field name="workcenter_operation_id" options="{'no_create': False}"/>
             </xpath>
 <!--            <xpath expr="//field[@name='name']" position="attributes">-->
 <!--                <attribute name="required">0</attribute>-->

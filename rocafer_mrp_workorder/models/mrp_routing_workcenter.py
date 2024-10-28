@@ -7,7 +7,7 @@ from odoo import fields, models, api, _
 class MrpRoutingWorkcenterInherit(models.Model):
     _inherit = 'mrp.routing.workcenter'
 
-    operation_selection = fields.Many2one(
+    workcenter_operation_id = fields.Many2one(
         comodel_name='workcenter.operation',
         string='Operación',
     )
@@ -19,8 +19,8 @@ class MrpRoutingWorkcenterInherit(models.Model):
         "- In automatic mode, supposed first time when there aren't any work orders yet"
     )
 
-    @api.onchange('operation_selection')
+    @api.onchange('workcenter_operation_id')
     def _onchange_operation_selection(self):
         for record in self:
-            if record.operation_selection:
-                record.name = record.operation_selection.name
+            if record.workcenter_operation_id:
+                record.name = record.workcenter_operation_id.name
