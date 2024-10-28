@@ -24,7 +24,7 @@
                 <field name="date_order" widget="date"/>
             </field>
 
-<!--            <xpath expr="//field[@name='name']" position="replace"/>-->
+            <xpath expr="//field[@name='name']" position="replace"/>
         </field>
     </record>
 </odoo>
