@@ -21,5 +21,6 @@ class MrpRoutingWorkcenterInherit(models.Model):
 
     @api.onchange('operation_selection')
     def _onchange_operation_selection(self):
-        if self.operation_selection:
-            self.name = self.operation_selection.name
+        for record in self:
+            if record.operation_selection:
+                record.name = record.operation_selection.name

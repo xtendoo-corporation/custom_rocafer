@@ -6,5 +6,6 @@ from odoo import fields, models, api, _
 
 class WorkcenterOperation(models.Model):
     _name = 'workcenter.operation'
+    _description = 'Operaciones'
 
     name = fields.Char('Operación', required=True)
