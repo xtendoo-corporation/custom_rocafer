@@ -8,23 +8,16 @@
             ref="mrp.mrp_production_workorder_tree_editable_view"
         />
         <field name="arch" type="xml">
-
-            <field name="name" position="after">
-                <!--OPERACION-->
+            <field name="name" position="before">
                 <field name="workcenter_operation_id" options="{'no_create': False}"/>
             </field>
-
             <field name="workcenter_operation_id" position="after">
-                <!--EMPLEADO-->
                 <field name="employee_id"/>
             </field>
-
             <field name="partner_id" position="after">
-                <!--FECHA DE PEDIDO-->
                 <field name="date_order" widget="date"/>
             </field>
-
-            <xpath expr="//field[@name='name']" position="replace"/>
+<!--            <xpath expr="//field[@name='name']" position="replace"/>-->
         </field>
     </record>
 </odoo>
