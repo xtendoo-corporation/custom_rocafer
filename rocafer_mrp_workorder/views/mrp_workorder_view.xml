@@ -17,7 +17,7 @@
             <field name="partner_id" position="after">
                 <field name="date_order" widget="date"/>
             </field>
-<!--            <xpath expr="//field[@name='name']" position="replace"/>-->
+            <field name="name" position="replace" optional="hide"/>
         </field>
     </record>
 </odoo>
