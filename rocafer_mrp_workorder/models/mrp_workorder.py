@@ -8,7 +8,7 @@ class MrpWorkOrder(models.Model):
 
     workcenter_operation_id = fields.Many2one(
         comodel_name='workcenter.operation',
-        string='Operación',
+        string='Tipo de operación',
     )
 
     @api.onchange('workcenter_operation_id')
