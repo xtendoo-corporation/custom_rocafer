@@ -11,7 +11,7 @@
             <field name="name" position="before">
                 <field name="workcenter_operation_id" options="{'no_create': False}"/>
             </field>
-            <field name="workcenter_operation_id" position="after">
+            <field name="workcenter_id" position="after">
                 <field name="employee_id"/>
             </field>
             <field name="partner_id" position="after">
