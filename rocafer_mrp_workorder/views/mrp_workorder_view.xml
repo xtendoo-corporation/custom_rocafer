@@ -17,7 +17,9 @@
             <field name="partner_id" position="after">
                 <field name="date_order" widget="date"/>
             </field>
-            <field name="name" position="replace" optional="hide"/>
+            <field name="name" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </field>
         </field>
     </record>
 </odoo>
