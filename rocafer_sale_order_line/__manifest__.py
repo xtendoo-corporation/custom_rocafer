@@ -6,9 +6,10 @@
     "company": "Xtendoo",
     "website": "http://www.xtendoo.es",
     "category": "Warehouse Management",
-    "depends": ["product", "rocafer_product_template_report"],
+    "depends": ["product", "rocafer_product_template_report", "sale"],
     "license": "AGPL-3",
     "data": [
+        "views/sale_order_line_view.xml",
     ],
     "installable": True,
 }

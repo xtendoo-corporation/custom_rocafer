@@ -3,6 +3,13 @@ from odoo import models, api, fields
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 
+    total_units = fields.Integer(string='Unidades totales', compute='_compute_total_units', store=True)
+
+    @api.depends('product_uom_qty')
+    def _compute_total_units(self):
+        for line in self:
+            line.total_units = line.product_uom_qty * 1000
+
     assembly_figure_x_from_product_template = fields.Integer(
         string='Assembly figure x',
         related='product_id.assembly_figure_x',
