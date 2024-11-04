@@ -8,7 +8,7 @@ class SaleOrderLine(models.Model):
     @api.depends('product_uom_qty')
     def _compute_total_units(self):
         for line in self:
-            line.total_units = line.product_uom_qty * 1000
+            line.total_units = line.product_uom_qty * line.product_id.uom_id.ratio
 
     assembly_figure_x_from_product_template = fields.Integer(
         string='Assembly figure x',
