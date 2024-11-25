@@ -5,7 +5,7 @@ class StockPickingBatch(models.Model):
 
     def action_picking_batch_send(self):
         self.ensure_one()
-        z
+        template = self.company_id.stock_mail_confirmation_template_id
         compose_form = self.env.ref(
             "mail.email_compose_message_wizard_form",
             False,
