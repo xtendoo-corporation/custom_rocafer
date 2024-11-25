@@ -5,10 +5,10 @@ class SaleOrderLine(models.Model):
 
     total_units = fields.Integer(string='Unidades totales', compute='_compute_total_units', store=True)
 
-    @api.depends('product_uom_qty')
+    @api.depends('product_uom_qty', 'product_uom')
     def _compute_total_units(self):
         for line in self:
-            line.total_units = line.product_uom_qty * line.product_id.uom_id.ratio
+            line.total_units = line.product_uom_qty * line.product_uom.ratio
 
     assembly_figure_x_from_product_template = fields.Integer(
         string='Assembly figure x',

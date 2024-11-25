@@ -71,6 +71,12 @@
                     Nº De pedido:
                     <t t-esc="ml.picking_id.sale_id.name"/>
                 </span>
+                <br/>
+                <span>
+                    <!--Pasar aqui los millares-->
+                    Millares:
+                    <t t-esc="ml.picking_id.sale_id.date_order"/>
+                </span>
             </td>
         </xpath>
 
