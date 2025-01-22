@@ -81,6 +81,22 @@
             </td>
         </xpath>
 
+         <!--Cuerpo de cantidad sin decimales-->
+        <xpath expr="//table[1]/tbody/tr/td[3]" position="replace">
+            <td>
+                <span t-esc="int(ml.quantity)">Quantity Done</span>
+                <span t-field="ml.product_uom_id" groups="uom.group_uom">units</span>
+                <span t-if="ml.move_id.product_packaging_id">
+                    <span t-if="o.state != 'done'">
+                        (<span t-field="ml.product_packaging_qty" t-options='{"widget": "integer"}'/> <span t-field="ml.move_id.product_packaging_id.name"/>)
+                    </span>
+                    <span t-if="o.state == 'done'">
+                        (<span t-field="ml.product_packaging_qty" t-options='{"widget": "integer"}'/> <span t-field="ml.move_id.product_packaging_id.name"/>)
+                    </span>
+                </span>
+            </td>
+        </xpath>
+
         <!--Cuerpo de precio unitario, subtotal-->
         <xpath expr="//table[1]/tbody/tr" position="inside">
             <t t-if="o.sale_id and o.move_line_ids and is_stock_manager">
