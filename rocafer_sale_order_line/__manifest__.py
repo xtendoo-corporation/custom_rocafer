@@ -10,6 +10,7 @@
     "license": "AGPL-3",
     "data": [
         "views/sale_order_line_view.xml",
+        "views/stock_picking_form_view.xml",
     ],
     "installable": True,
 }

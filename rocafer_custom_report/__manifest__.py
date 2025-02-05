@@ -15,6 +15,8 @@
     "data": [
         "reports/stock_picking_report_valued.xml",
         "reports/stock_package_report.xml",
+        "reports/sale_order_report.xml",
+        "reports/invoice_document_report.xml",
         "views/stock_picking_view.xml",
     ],
     "installable": True,

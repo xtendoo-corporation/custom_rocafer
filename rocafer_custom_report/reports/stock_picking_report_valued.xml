@@ -46,7 +46,7 @@
         <xpath expr="//table[1]/thead/tr" position="inside">
             <t t-if="o.sale_id and o.move_line_ids and is_stock_manager">
                 <th class="text-end">
-                    <strong>Precio unidad</strong>
+                    <strong>Precio Millar</strong>
                 </th>
                 <th class="text-end" groups="product.group_discount_per_so_line">
                     <strong>Descuento</strong>
@@ -83,15 +83,30 @@
 
          <!--Cuerpo de cantidad sin decimales-->
         <xpath expr="//table[1]/tbody/tr/td[3]" position="replace">
-             <td>
-                <span t-esc="'{:,}'.format(int(ml.quantity)).replace(',', '.')" />
-                <span t-field="ml.product_uom_id" groups="uom.group_uom">units</span>
+<!--             <td>-->
+<!--                <span t-esc="int(ml.quantity)" />-->
+<!--                <span t-field="ml.product_uom_id" groups="uom.group_uom">units</span>-->
+<!--                <span t-if="ml.move_id.product_packaging_id">-->
+<!--                    <span t-if="o.state != 'done'">-->
+<!--                        (<span t-esc="'{:,}'.format(ml.product_packaging_qty).replace(',', '.')" /> <span t-field="ml.move_id.product_packaging_id.name"/>)-->
+<!--                    </span>-->
+<!--                    <span t-if="o.state == 'done'">-->
+<!--                        (<span t-esc="'{:,}'.format(ml.product_packaging_qty).replace(',', '.')" /> <span t-field="ml.move_id.product_packaging_id.name"/>)-->
+<!--                    </span>-->
+<!--                </span>-->
+<!--            </td>-->
+            <td class="text-end">
+                <span t-esc="'{:.3f}'.format(ml.quantity).replace('.', ',')"/>
                 <span t-if="ml.move_id.product_packaging_id">
                     <span t-if="o.state != 'done'">
-                        (<span t-esc="'{:,}'.format(ml.product_packaging_qty).replace(',', '.')" /> <span t-field="ml.move_id.product_packaging_id.name"/>)
+                        (
+                        <span t-esc="'{:.3f}'.format(ml.product_packaging_qty).replace('.', ',')"/>
+                        <span t-field="ml.move_id.product_packaging_id.name"/>)
                     </span>
                     <span t-if="o.state == 'done'">
-                        (<span t-esc="'{:,}'.format(ml.product_packaging_qty).replace(',', '.')" /> <span t-field="ml.move_id.product_packaging_id.name"/>)
+                        (
+                        <span t-esc="'{:.3f}'.format(ml.product_packaging_qty).replace('.', ',')"/>
+                        <span t-field="ml.move_id.product_packaging_id.name"/>)
                     </span>
                 </span>
             </td>

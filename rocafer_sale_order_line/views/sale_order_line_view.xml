@@ -6,7 +6,7 @@
             <field name="inherit_id" ref="sale.view_order_line_tree"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='price_subtotal']" position="after">
-                    <field name="total_units" readonly="1"/>
+                    <field name="total_units" readonly="0"/>
                 </xpath>
             </field>
         </record>
@@ -17,7 +17,7 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="before">
-                    <field name="total_units" readonly="1"/>
+                    <field name="total_units" readonly="0"/>
                 </xpath>
             </field>
         </record>
